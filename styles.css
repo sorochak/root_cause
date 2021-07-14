@@ -1,1 +1,64 @@
+html body {
+    height: 100vh;
+    width: 100%;
+}
 
+body {
+    margin: 0;
+}
+
+#container1 {
+    position: absolute;
+    top: 14%;
+    left: 25%;
+    height: 600;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10%;
+    background-color: #D6D1D1;
+    text-align: center;
+    border-radius: 25px;
+ 
+}
+
+#main {
+    background-color: #747272;
+    height: 92.5vh;
+}
+
+#header {
+    background-color: #3B3B3B;
+    color: #6FB43F;
+    font-family: Museo Slab;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+
+h1 {
+    padding: 11;
+}
+
+h2 {
+    color: #6FB43F;
+    font-family: Museo Slab;
+}
+
+p {
+    color: #747272;
+    font-family: Museo Slab;
+}
+
+.form-check-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #6FB43F;
+}
+
+.categoryRadios {
+    margin: 40px;
+}
+
+#submitQ1 {
+    margin-top: 30px;
+}
