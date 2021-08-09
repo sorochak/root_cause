@@ -7,11 +7,11 @@ body {
     margin: 0;
 }
 
-#container1 {
-    position: absolute;
+.quizContainer {
+    position: relative;  /* should be absol., but for now I have relative so I can see all boxes at once*/
     top: 14%;
     left: 25%;
-    height: 600;
+    height: 600px;
     width: 50%;
     margin: 0 auto;
     padding: 10%;
