@@ -19,7 +19,7 @@
     <div class="container-fluid" id="main">
 
         <!--     Container 1 - Landing Page  -->
-        <div class="col-md-5 p-lg-5 mx-auto my-5 box" id="container1">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="">
             <h2>Root Cause Analysis</h2><br>
             <p>This short quiz will guide you through the next steps once you have
                 identified a potential problem within 
@@ -56,6 +56,59 @@
             </div>
             <a class="btn btn-outline-secondary" id="submitQ1" href="#">Next</a>
         </div>
+
+        <!--     Container 2.1 - Safety Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2.1">
+            <h2>What safety Equipment is having an issue?</h2><br>
+            <p></p><br>
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="WLS" value="1">
+                    <label class="form-check-label" for="WLS">Water Level Sensor</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="hatch" value="2">
+                    <label class="form-check-label" for="hatch">Hatch Intrusion</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="offPos" value="3">
+                    <label class="form-check-label" for="offPos">Off Position</label>
+                </div>
+            </div>
+
+            <a class="btn btn-outline-secondary" id="submit2.1" href="#">Next</a>
+        </div>
+
+        <!--     Container 2.A - Water Level Sensor -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+            <h2>What is the current WLS voltage reading?</h2><br>
+            <br>
+            <input class="form-control" type="text" placeholder="Default input"> <!-- If voltage drops, make a case  -->
+            <br><br>
+            <h2>What voltage was the sensor previously at?</h2><br>
+            <input class="form-control" type="text" placeholder="Default input">
+
+            <a class="btn btn-outline-secondary" id="submit2.A" href="#">Next</a>
+        </div>
+
+        <!--     Container 2.B - Hatch Sensor -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+            <h2>Is the hatch reading open?</h2><br>
+            <br>
+            <p> Please remember to check the buoys MS teams channel to verify there is no planned maintenance scheduled for this buoy. </p>
+            <p> Additionally, please check the incident report log to verify there are no notes about the hatch being left open upon deployment. </p>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+
+
+            <a class="btn btn-outline-secondary" id="submit2.B" href="#">Next</a>
+        </div>
+
     </div>
 </body>
 </html>
