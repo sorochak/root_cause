@@ -18,7 +18,7 @@
     <!--     Main Content Div    -->
     <div class="container-fluid" id="main">
 
-        <!--     Container 1 - Landing Page  -->
+        <!--     Container 0 - Landing Page  -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="">
             <h2>Root Cause Analysis</h2><br>
             <p>This short quiz will guide you through the next steps once you have
@@ -57,6 +57,34 @@
             <a class="btn btn-outline-secondary" id="submitQ1" href="#">Next</a>
         </div>
 
+        <!--     Container 1.1 - Power Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1.1">
+            <h2>What Power Equipment is having an issue?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="WTG" value="1">
+                    <label class="form-check-label" for="WTG">Wind Turbine</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="solar" value="2">
+                    <label class="form-check-label" for="solar">Solar</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="fuelCell" value="3">
+                    <label class="form-check-label" for="fuelCell">Generator (Fuel Cell)</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="diesel" value="4">
+                    <label class="form-check-label" for="diesel">Generator (Diesel)</label>
+                </div>
+            </div>
+
+            <a class="btn btn-outline-secondary" id="submit1.1" href="#">Next</a>
+        </div>
+
         <!--     Container 2.1 - Safety Landing Page -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2.1">
             <h2>What safety Equipment is having an issue?</h2><br>
@@ -79,7 +107,122 @@
             </div>
 
             <a class="btn btn-outline-secondary" id="submit2.1" href="#">Next</a>
+        </div> 
+
+        <!--     Container 1.A - Wind Turbine Generator -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+            <h2>Is there data available from the other WTG?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+            <br>
+            <h2>Load the buoy's location on Windy.com. What is the forecasted wind speed in meters per second? (m/s)</h2><br>
+            <br>
+            <label for="windspeed">Windspeed (m/s):</label>
+            <input class="form-control" type="number" id="windspeed" name="windspeed">
+
+            <br>
+            <h2>Load the buoy's camera images. Are both WTGs present and moving in the same direction?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+    
+            <a class="btn btn-outline-secondary" id="submit1.A" href="#">Next</a>
         </div>
+
+        <!--     Container 1.B - Solar Panel -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+            <h2>Is there data available for both solar panels?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+            <br>
+            <h2>Is the other solar panel producing power?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+            <br>
+            <h2>Load the buoy's location on Windy.com. Is the weather forecasted to be sunny?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <br>
+            <h2>Are both panels using the same MPPT? Navigate to SmartWeb, if both panels use one MPPT, there will only be one MPPT between FC1 and FC2. </h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+            <br>
+            <h2>IF YES: check total average power in Net Power Stats. Is total average power higher than MPPT reading? </h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <br>
+
+    
+            <a class="btn btn-outline-secondary" id="submit1.B" href="#">Next</a>
+        </div>
+
+        <!--     Container 1.C - Diesel Generator -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+            <h2>Are there messages coming into SmartWeb?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option> 
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+            <br>
+            <h2>Does the generator kick on when it is supposed to?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+    
+            <a class="btn btn-outline-secondary" id="submit1.C" href="#">Next</a>
+        </div>
+
+        <!--     Container 1.D - Fuel Cell -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1.D"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+            <h2>Are there messages coming into SmartWeb?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option> 
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+            <br>
+            <h2>Does the fuel cell kick on when it is supposed to?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+    
+            <a class="btn btn-outline-secondary" id="submit1.D" href="#">Next</a>
+        </div>
+
 
         <!--     Container 2.A - Water Level Sensor -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
