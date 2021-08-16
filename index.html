@@ -141,6 +141,30 @@
             <a class="btn btn-outline-secondary" id="submit1.1" href="#">Next</a>
         </div>
 
+        <!--     Container 4.1 - Zephir Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.1">
+            <h2>What is happening with the Zephir?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="raw" value="1">
+                    <label class="form-check-label" for="raw">Raw Files Missing Data</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="processed" value="2">
+                    <label class="form-check-label" for="processed">Processed Files Missing Data</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="flag" value="3">
+                    <label class="form-check-label" for="flag">Critical Error Flag</label>
+                </div>
+            </div>
+
+            <a class="btn btn-outline-secondary" id="submit1.1" href="#">Next</a>
+        </div>
+
         <!--     Container 7 - Camera Check -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.1">
             <h2>Check Camera Images</h2><br>
@@ -383,7 +407,7 @@
             <option>IDK</option>
         </select>
          
-        <a class="btn btn-outline-secondary" id="submit3.D" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit3.D" href="#">Next< /a>
     </div> 
 
     <!--     Container 3.E - Gill -->
@@ -403,5 +427,80 @@
          
         <a class="btn btn-outline-secondary" id="submit3.E" href="#">Next</a>
     </div>
+
+    <!--     Container 4.A - Zephir Processed -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Processed</h2><br>
+        <p>Is Gill Data Available?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is True Heading Data Available?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <p>Is the IPC Online?</p> 
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+         
+        <a class="btn btn-outline-secondary" id="submit4.A" href="#">Next< /a>
+    </div> 
+
+    <!--     Container 4.B    -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>RAW</h2><br>
+        <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
+        <br>
+        <p>Is Gill Data Available?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is True Heading Data Available?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <p>Is the IPC Online?</p> 
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+         
+        <a class="btn btn-outline-secondary" id="submit4.B" href="#">Next</a>
+    </div>
+
+    <!--     Container 4.C - IPC -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Check for files on the IPC</h2><br>
+        <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option> 
+            <option>IDK</option>
+        </select>
+        <br> 
+         
+        <a class="btn btn-outline-secondary" id="submit4.C" href="#">Next</a>
+    </div>
 </body>
-</html>
+</html> 
