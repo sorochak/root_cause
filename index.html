@@ -185,6 +185,26 @@
             <a class="btn btn-outline-secondary" id="submit5.1" href="#">Next</a>
         </div>
 
+        <!--     Container 6.1 - Communication Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.1">
+            <h2>What is wrong with Communications?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="ftp" value="1">
+                    <label class="form-check-label" for="ftp">No FTP Files</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="smartweb" value="2">
+                    <label class="form-check-label" for="smartweb">Missing SmartWeb Messages</label>
+                </div>
+            </div>
+ 
+            <a class="btn btn-outline-secondary" id="submit6.1" href="#">Next</a>
+        </div>
+
         <!--     Container 7 - Camera Check -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.1">
             <h2>Check Camera Images</h2><br>
@@ -206,7 +226,7 @@
             <select class="form-control">
                 <option>Yes</option>
                 <option>No</option>
-                <option>IDK</option>
+                <option>IDK</option> 
             </select>
             <br>
             <h2>Load the buoy's location on Windy.com. What is the forecasted wind speed in meters per second? (m/s)</h2><br>
@@ -478,7 +498,7 @@
     </div> 
 
     <!--     Container 4.B    -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>RAW</h2><br>
         <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
         <br>
@@ -509,7 +529,7 @@
     </div>
 
     <!--     Container 4.C - IPC -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Check for files on the IPC</h2><br>
         <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
         <br>
@@ -521,6 +541,78 @@
         <br> 
          
         <a class="btn btn-outline-secondary" id="submit4.C" href="#">Next</a>
+    </div>
+
+    <!--     Container 6.A - APS -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Log on to AXYS APS. Is there data on APS for the files that you are missing?</h2><br>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="noData" value="2">
+            <label class="form-check-label" for="noData">No Data on APS</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="yesData" value="3">
+            <label class="form-check-label" for="yesData">Data on APS</label>
+        </div>
+        <br> 
+          
+        <a class="btn btn-outline-secondary" id="submit6.A" href="#">Next</a>
+    </div>
+
+    <!--     Container 6.B - SW Troubleshooting -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Check Communications</h2><br>
+        <br>
+        <p>We are going to log on to SmartWeb to do some troubleshooting with the communication channels</p>
+        <br>
+        <h2>Check the 'status' message. Are there messages coming in every 10 mins?</h2><br>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br>
+        <h2>Check the 'Off-Position' message. Are there messages coming once daily, just after midnnight UTC?</h2><br>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br>
+
+        <a class="btn btn-outline-secondary" id="submit6.B" href="#">Next</a>
+    </div>
+
+    <!--     Container 6.C - TCP Issue -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>TCP Issue</h2><br>
+        <br>
+        <p>We have identified an issue with the TCP communications. A case will need to be created; however, we want to gather some more information first.</p>
+        <br>
+        <h2>Check through other TCP messages, such as MET, generator, lidar power... how many messages are missing?</h2><br>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="one" value="2">
+            <label class="form-check-label" for="one">One</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="multiple" value="3">
+            <label class="form-check-label" for="muliple">More than One</label>
+        </div>
+        <br> 
+        <h2>Check the other FC. Are there messages missing on the other FC also?</h2><br>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br>
+
+        <a class="btn btn-o utline-secondary" id="submit6.C" href="#">Next</a>
     </div>
 </body>
 </html> 
