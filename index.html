@@ -41,7 +41,7 @@
                     <label class="form-check-label" for="inlineRadio3">Safety</label>
                   </div>
             </div>
-            
+             
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="problemCategory" id="zephyr" value="zephyr">
@@ -108,6 +108,52 @@
 
             <a class="btn btn-outline-secondary" id="submit2.1" href="#">Next</a>
         </div> 
+
+        <!--     Container 3.1 - Met Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.1">
+            <h2>What Met Equipment is having an issue?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="humidity" value="1">
+                    <label class="form-check-label" for="humidity">Humidity Sensor</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="airTemp" value="2">
+                    <label class="form-check-label" for="airTemp">Air Temp Sensor</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="barometer" value="3">
+                    <label class="form-check-label" for="barometer">Barometer</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="camera" value="4">
+                    <label class="form-check-label" for="camera">Camera</label>  <!--  Sould Camera be included in Met???  -->
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-ch  eck-input" type="radio" name="problemCategory" id="gill" value="4">
+                    <label class="form-check-label" for="gill">Gill</label> 
+                </div>
+            </div>
+
+            <a class="btn btn-outline-secondary" id="submit1.1" href="#">Next</a>
+        </div>
+
+        <!--     Container 7 - Camera Check -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.1">
+            <h2>Check Camera Images</h2><br>
+            <p>Log onto AXTS APS and visually inspect the buoy. Can you see any visible damage or other obvious issues? (ie. blocked lidar, birds etc.)</p><br>  
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+
+            <a class="btn btn-outline-secondary" id="submit1.1" href="#">Next</a>
+        </div>
 
         <!--     Container 1.A - Wind Turbine Generator -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
@@ -264,6 +310,98 @@
             <a class="btn btn-outline-secondary" id="submit2.C" href="#">Next</a>
         </div>
 
+    </div>
+
+    <!--     Container 3.A - Humidity Sensor -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Humidity Sensor</h2><br>
+        <p>Is the humidity sensor reporting near 100% humidity?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+
+        <a class="btn btn-outline-secondary" id="submit3.A" href="#">Next</a>
+    </div>
+
+    <!--     Container 3.B - Air Temp Sensor -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Air Temp Sensor</h2><br>
+        <p>Is the sensor reporting incorrect temperatures for the region where the buoy is deployed?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is the file missing completely from the FTP?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+
+        <a class="btn btn-outline-secondary" id="submit3.B" href="#">Next</a>
+    </div>
+
+    <!--     Container 3.C - Barometer -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Barometer</h2><br>
+        <p>Is the sensor reporting incorrect pressure for the region where the buoy is deployed?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+         
+        <a class="btn btn-outline-secondary" id="submit3.C" href="#">Next</a>
+    </div>
+
+    <!--     Container 3.D - Camera -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Camera</h2><br>
+        <p>Are camera images missing from the FTP?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is the buoy on power savings or essentials mode?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+         
+        <a class="btn btn-outline-secondary" id="submit3.D" href="#">Next</a>
+    </div> 
+
+    <!--     Container 3.E - Gill -->
+
+    <!--     This one may need updates to the questions? -->
+    
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Gill</h2><br>
+        <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option> 
+            <option>IDK</option>
+        </select>
+        <br> 
+         
+        <a class="btn btn-outline-secondary" id="submit3.E" href="#">Next</a>
     </div>
 </body>
 </html>
