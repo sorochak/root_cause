@@ -9,17 +9,17 @@ body {
 }
 
 .quizContainer {
+    display: block;
     position: relative;  /* should be absol., but for now I have relative so I can see all boxes at once*/
     top: 14%;
     left: 25%;
-    height: 600px;
+    height: auto;
     width: 50%;
-    margin: 0 auto;
+    margin: 100px!important;
     padding: 10%;
     background-color: #D6D1D1;
     text-align: center;
     border-radius: 25px;
- 
 }
 
 #main {
