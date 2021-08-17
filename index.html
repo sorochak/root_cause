@@ -41,7 +41,7 @@
                     <label class="form-check-label" for="inlineRadio3">Safety</label>
                   </div>
             </div>
-            
+             
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="problemCategory" id="zephyr" value="zephyr">
@@ -109,6 +109,128 @@
             <a class="btn btn-outline-secondary" id="submit2.1" href="#">Next</a>
         </div> 
 
+        <!--     Container 3.1 - Met Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.1">
+            <h2>What Met Equipment is having an issue?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="humidity" value="1">
+                    <label class="form-check-label" for="humidity">Humidity Sensor</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="airTemp" value="2">
+                    <label class="form-check-label" for="airTemp">Air Temp Sensor</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="barometer" value="3">
+                    <label class="form-check-label" for="barometer">Barometer</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="camera" value="4">
+                    <label class="form-check-label" for="camera">Camera</label>  <!--  Sould Camera be included in Met???  -->
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-ch  eck-input" type="radio" name="problemCategory" id="gill" value="4">
+                    <label class="form-check-label" for="gill">Gill</label> 
+                </div>
+            </div>
+
+            <a class="btn btn-outline-secondary" id="submit3.1" href="#">Next</a>
+        </div>
+
+        <!--     Container 4.1 - Zephir Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.1">
+            <h2>What is happening with the Zephir?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="raw" value="1">
+                    <label class="form-check-label" for="raw">Raw Files Missing Data</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="processed" value="2">
+                    <label class="form-check-label" for="processed">Processed Files Missing Data</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="flag" value="3">
+                    <label class="form-check-label" for="flag">Critical Error Flag</label>
+                </div>
+            </div>
+
+            <a class="btn btn-outline-secondary" id="submit4.1" href="#">Next</a>
+        </div>
+
+        <!--     Container 5.1 - Windcube Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="5.1">
+            <h2>What is happening with the wind cube ?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="raw" value="1">
+                    <label class="form-check-label" for="raw">Raw Files Missing Data</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="sta" value="2">
+                    <label class="form-check-label" for="sta">.sta Missing</label>
+                </div>
+            </div>
+
+            <a class="btn btn-outline-secondary" id="submit5.1" href="#">Next</a>
+        </div>
+
+        <!--     Container 6.1 - Communication Landing Page -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.1">
+            <h2>What is wrong with Communications?</h2><br>
+            <p></p><br> 
+            <h2>Select One:</h2><br>
+
+            <div class="categoryRadios">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="ftp" value="1">
+                    <label class="form-check-label" for="ftp">No FTP Files</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="problemCategory" id="smartweb" value="2">
+                    <label class="form-check-label" for="smartweb">Missing SmartWeb Messages</label>
+                </div>
+            </div>
+ 
+            <a class="btn btn-outline-secondary" id="submit6.1" href="#">Next</a>
+        </div>
+
+        <!--     Container 7 - Camera Check -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="7">
+            <h2>Check Camera Images</h2><br>
+            <p>Log onto AXTS APS and visually inspect the buoy. Can you see any visible damage or other obvious issues? (ie. blocked lidar, birds etc.)</p><br>  
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+                <option>IDK</option>
+            </select>
+
+            <a class="btn btn-outline-secondary" id="submit1.1" href="#">Next</a>
+        </div>
+        <!--     Container 8 - Create a Case -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="8">
+            <h2>Check for an existing Case</h2><br>
+            <p>We have identified a problem with the buoy system. Let's double check and see if a case already exists for this problem.</p><br>  
+            <br>
+            <p>Please go to:</p><br> 
+            <p>https://app.smartsheet.com/b/form/11158fba52064df095caf573f8c57b53</p><br> 
+            <p>If no case exists:</p><br> 
+            <h2>Create a Case</h2><br>
+            
+            <a class="btn btn-outline-secondary" id="submit1.1" href="#">Next</a>
+        </div>
+
         <!--     Container 1.A - Wind Turbine Generator -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
             <h2>Is there data available from the other WTG?</h2><br>
@@ -116,7 +238,7 @@
             <select class="form-control">
                 <option>Yes</option>
                 <option>No</option>
-                <option>IDK</option>
+                <option>IDK</option> 
             </select>
             <br>
             <h2>Load the buoy's location on Windy.com. What is the forecasted wind speed in meters per second? (m/s)</h2><br>
@@ -316,5 +438,244 @@
         </div>
 
     </div>
+
+    <!--     Container 3.A - Humidity Sensor -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Humidity Sensor</h2><br>
+        <p>Is the humidity sensor reporting near 100% humidity?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+
+        <a class="btn btn-outline-secondary" id="submit3.A" href="#">Next</a>
+    </div>
+
+    <!--     Container 3.B - Air Temp Sensor -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Air Temp Sensor</h2><br>
+        <p>Is the sensor reporting incorrect temperatures for the region where the buoy is deployed?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is the file missing completely from the FTP?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+
+        <a class="btn btn-outline-secondary" id="submit3.B" href="#">Next</a>
+    </div>
+
+    <!--     Container 3.C - Barometer -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Barometer</h2><br>
+        <p>Is the sensor reporting incorrect pressure for the region where the buoy is deployed?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+         
+        <a class="btn btn-outline-secondary" id="submit3.C" href="#">Next</a>
+    </div>
+
+    <!--     Container 3.D - Camera -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Camera</h2><br>
+        <p>Are camera images missing from the FTP?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is the buoy on power savings or essentials mode?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+         
+        <a class="btn btn-outline-secondary" id="submit3.D" href="#">Next< /a>
+    </div> 
+
+    <!--     Container 3.E - Gill -->
+
+    <!--     This one may need updates to the questions? -->
+    
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3.E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Gill</h2><br>
+        <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option> 
+            <option>IDK</option>
+        </select>
+        <br> 
+         
+        <a class="btn btn-outline-secondary" id="submit3.E" href="#">Next</a>
+    </div>
+
+    <!--     Container 4.A - Zephir Processed -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Processed</h2><br>
+        <p>Is Gill Data Available?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is True Heading Data Available?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <p>Is the IPC Online?</p> 
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+         
+        <a class="btn btn-outline-secondary" id="submit4.A" href="#">Next< /a>
+    </div> 
+
+    <!--     Container 4.B    -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>RAW</h2><br>
+        <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
+        <br>
+        <p>Is Gill Data Available?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br> 
+        <p>Is True Heading Data Available?</p>
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <p>Is the IPC Online?</p> 
+        <br> 
+        <select class="form-control">
+            <option>Yes</option>  
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+         
+        <a class="btn btn-outline-secondary" id="submit4.B" href="#">Next</a>
+    </div>
+
+    <!--     Container 4.C - IPC -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Check for files on the IPC</h2><br>
+        <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option> 
+            <option>IDK</option>
+        </select>
+        <br> 
+         
+        <a class="btn btn-outline-secondary" id="submit4.C" href="#">Next</a>
+    </div>
+
+    <!--     Container 6.A - APS -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Log on to AXYS APS. Is there data on APS for the files that you are missing?</h2><br>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="noData" value="2">
+            <label class="form-check-label" for="noData">No Data on APS</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="yesData" value="3">
+            <label class="form-check-label" for="yesData">Data on APS</label>
+        </div>
+        <br> 
+          
+        <a class="btn btn-outline-secondary" id="submit6.A" href="#">Next</a>
+    </div>
+
+    <!--     Container 6.B - SW Troubleshooting -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>Check Communications</h2><br>
+        <br>
+        <p>We are going to log on to SmartWeb to do some troubleshooting with the communication channels</p>
+        <br>
+        <h2>Check the 'status' message. Are there messages coming in every 10 mins?</h2><br>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br>
+        <h2>Check the 'Off-Position' message. Are there messages coming once daily, just after midnnight UTC?</h2><br>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br>
+
+        <a class="btn btn-outline-secondary" id="submit6.B" href="#">Next</a>
+    </div>
+
+    <!--     Container 6.C - TCP Issue -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>TCP Issue</h2><br>
+        <br>
+        <p>We have identified an issue with the TCP communications. A case will need to be created; however, we want to gather some more information first.</p>
+        <br>
+        <h2>Check through other TCP messages, such as MET, generator, lidar power... how many messages are missing?</h2><br>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="one" value="2">
+            <label class="form-check-label" for="one">One</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="problemCategory" id="multiple" value="3">
+            <label class="form-check-label" for="muliple">More than One</label>
+        </div>
+        <br> 
+        <h2>Check the other FC. Are there messages missing on the other FC also?</h2><br>
+        <br>
+        <select class="form-control">
+            <option>Yes</option> 
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br>
+
+        <a class="btn btn-o utline-secondary" id="submit6.C" href="#">Next</a>
+    </div>
 </body>
-</html>
+</html> 
