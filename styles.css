@@ -5,6 +5,7 @@ html body {
 
 body {
     margin: 0;
+    background-color: #747272;
 }
 
 .quizContainer {
@@ -36,7 +37,7 @@ body {
 }
 
 h1 {
-    padding: 11;
+    padding: 11px;
 }
 
 h2 {
@@ -61,4 +62,8 @@ p {
 
 #submitQ1 {
     margin-top: 30px;
+}
+
+.btn-outline-secondary{
+    margin-top: 50px;
 }
