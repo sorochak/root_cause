@@ -67,3 +67,8 @@ p {
 .btn-outline-secondary{
     margin-top: 50px;
 }
+
+.errorText{
+    color: red;
+    font-weight: 800;
+}
