@@ -244,7 +244,85 @@ $(document).ready(function (){
                     }); // END Off Pos Logic card
 
 
+    $('#submit3_1').click( () => { //safety card landing page
+        let metCat =  $('input[name="metCat"]:checked').val();
+        console.log(metCat);
 
+        switch (metCat) {
+            case "1": //Water Level Sensor
+                $('#3_A').show();
+                console.log("i'm in case one");
+                break;
+            case "2":// Hatch Intrusion
+                $('#3_B').show();
+                break;
+            case "3": //OffPos
+                $('#3_C').show();
+                break;
+            case "4": //OffPos
+                $('#3_D').show();
+                break;
+            case "5": //OffPos
+                $('#3_E').show();
+                break;
+            default:
+                $('#3_1').append('<div class="errorText">Please select an option to continue</div>');
+            //category = 0;
+        }// end switch safety landing
+        if (metCat != undefined) {
+            //$('#3_1').hide();
+        }
+    }); //end safety landing card
+
+        $('#submit3_A').click( () => { //Humidity Logic
+            let value1 = $('#hum1').val();
+            let value2 = $('#hum2').val();
+
+            if (value1  && value2 === "Yes") //if sensor 100% and data is missing from the FTP
+                $('#createCase').show();
+            else
+                $('#everythingOkay').show();
+
+            $('#3_A').hide();
+        }); // END Humidity Logic  CARD
+
+        $('#submit3_B').click( () => { //AirTemp Logic
+            let value1 = $('#atemp1').val();
+            let value2 = $('#atemp2').val();
+
+            if (value1 === "Yes" || value2 === "Yes") //If the thermometer is not reading correctly OR data missing on FTP
+                $('#createCase').show();
+            else
+                $('#everythingOkay').show();
+
+            $('#3_B').hide();
+        }); // ENDAirTemp Logic  CARD
+
+        $('#submit3_C').click( () => { //baro Logic
+            let value1 = $('#baro').val();
+
+            if (value1 === "Yes") //If the thermometer is not reading correctly OR data missing on FTP
+                $('#createCase').show();
+            else
+                $('#everythingOkay').show();
+
+            $('#3_C').hide();
+        }); // ENDbaro Logic  CARD
+
+        $('#submit3_D').click( () => { //cam Logic
+            let value1 = $('#cam1').val();
+            let value2 = $('#cam2').val();
+
+            if (value1 === "Yes" || value2 === "Yes") { //Buoy on Essentials. No problem
+                $('#everythingOkay').show();
+                $('#everythingOkay').prepend(`<h3>It appears that the buoy is on power saving mode.
+                It is expected for the camera files to be missing while power saving mode is turned on.</h3> <br>`);
+            }
+            else
+                $('#createCase').show();
+
+            $('#3_D').hide();
+        }); // END cam logic  CARD
 
 
 
