@@ -246,6 +246,9 @@
             <a href="https://app.smartsheet.com/b/form/11158fba52064df095caf573f8c57b53">Here</a> to verify if a case exists.</p>
             <p>If no case exists:</p><br>
             <h2>Create a Case</h2><br>
+            <p>Make sure all completed interventions are recorded in the intervention log:
+                https://axysaps.sharepoint.com/sites/OPS/Lists/DaaS%20Intervention/AllItems.aspx
+            </p><br>
 
             <a class="btn btn-outline-secondary" id="n8" href="#">Save Input</a>
         </div>
@@ -629,7 +632,15 @@
         <a class="btn btn-outline-secondary" id="submit4.A" href="#">Next</a>
     </div>
 
-    <!--     Container 4.B    -->
+    <!--     Container 4.AB - True Heading = No -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_AB"> <!-- This one shows up if True Heading Available is a NO -->
+        <h2>True Heading</h2><br>
+        <p>If True Heading Data is not available review and follow instructions in the SOP ATI-FLT-019 - True Heading Alert</p>
+
+        <a class="btn btn-outline-secondary" id="submit4.AB" href="#">Next</a>
+    </div>
+
+    <!--     Container 4.B - Zephir Raw -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>RAW</h2><br>
         <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
@@ -663,6 +674,23 @@
     <!--     Container 4.C - IPC -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Check for files on the IPC</h2><br>
+        <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
+        <br>
+        <select class="form-control">
+            <option>Yes</option>
+            <option>No</option>
+            <option>IDK</option>
+        </select>
+        <br>
+
+        <a class="btn btn-outline-secondary" id="submit4.C" href="#">Next</a>
+    </div>
+
+    <!--     Container 5.A - Windcube Troubleshooting -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="5_A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+        <h2>If the Windcube raw file is missing data (greater than 5 consecutive full rows of NaNs), or if the .sta file is missing bring it 
+            to the attention of an engineer before completing a system reboot as per SOP ATI-FLT-017 - Power Reset Procedure.
+        </h2><br>
         <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
         <br>
         <select class="form-control">
