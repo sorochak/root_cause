@@ -542,6 +542,8 @@
     <!--     Container 3_D - Camera -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_D"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Camera</h2><br>
+        <p><b>NOTE: Buoys f120 & f130 do not have cameras installed.</b></p>
+        <br>
         <p>Are camera images missing from the FTP?</p>
         <br>
         <select class="form-control" id="cam1">
@@ -549,10 +551,16 @@
             <option>No</option>
         </select>
         <br>
-        <p>Is the buoy on power savings or essentials mode?</p>
         <br>
-        <p>If you are not sure, check the MS teams channel for that buoy to see if there are any updates relating to power saving or essentials mode.</p>
+        <p>Is the buoy on power savings or essentials mode?
+        If you are not sure, check the MS teams channel for that buoy to see if there are any updates relating to power saving or essentials mode.</p>
         <select class="form-control" id="cam2">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <br><br>
+        <p>Are the images available from the other camera?</p>
+        <select class="form-control" id="cam3">
             <option>Yes</option>
             <option>No</option>
         </select>
@@ -567,13 +575,27 @@
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Gill</h2><br>
         <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
-        <br>
-        <select class="form-control">
+        <select class="form-control" id="gill1">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <br>
+        <br>
+        <p>Is the other gill missing data?</p>
+        <select class="form-control" id="gill2">
+            <option>Yes</option>
+            <option>No</option>
+            <option>N/A</option>
+        </select>
+        <br>
+        <br>
+        <p>Open up the LiDar - Processed file. Check under the headings labeled AXYS.(furthermost right columns in the PROCESSED excel sheet) Is there data missing in the LIDar File?</p>
+        <select class="form-control" id="gill2=3">
+            <option>Yes</option>
+            <option>No</option>
+            <option>N/A</option>
+        </select>
 
         <a class="btn btn-outline-secondary" id="submit3_E" href="#">Next</a>
     </div>

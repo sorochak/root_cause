@@ -310,10 +310,11 @@ $(document).ready(function (){
         }); // ENDbaro Logic  CARD
 
         $('#submit3_D').click( () => { //cam Logic
-            let value1 = $('#cam1').val();
+            let value1 = $('#cam1').val(); //collect answers for SmartSheet integration
             let value2 = $('#cam2').val();
+            let value3 = $('#cam3').val(); //collect answers for SmartSheet integration
 
-            if (value1 === "Yes" || value2 === "Yes") { //Buoy on Essentials. No problem
+            if (value2 === "Yes") { //Buoy on Essentials. No problem
                 $('#everythingOkay').show();
                 $('#everythingOkay').prepend(`<h3>It appears that the buoy is on power saving mode.
                 It is expected for the camera files to be missing while power saving mode is turned on.</h3> <br>`);
