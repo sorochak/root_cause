@@ -1,7 +1,28 @@
 $(document).ready(function (){
     $('.quizContainer').hide(); //hide all cards, then below, show only the starting card
     $('#0').show();
+    let visCards = [];
 
+        function addCardToArray(){
+
+            let arr = [];
+
+            var ele = document.querySelectorAll('[id]'); //grabs all ID divs on whole html DOM
+
+            for (var i = 0; i < ele.length; i++){ //for loop gets all visible divs
+                if($(ele[i]).is(":visible"))
+                    arr.push(ele[i]);
+            }
+
+            visCards.push(arr[2].id); //the card div is always the second one in the visible array. push the k value pair of ID to VisCard arr
+
+            console.log(arr);
+            console.log(visCards);
+            console.log(" is the visCard array");
+            console.log(typeof visCards[0]); //type of "string"
+        }
+
+    // console.log(orderOfCards[0]);
 
     $('#submit7').click( () => {
         $('#camCheck').hide(); //take this out when done
@@ -10,6 +31,7 @@ $(document).ready(function (){
         $('#submitQ1').click( () => { //home landing page
         let category =  $('input[name="problemCategory"]:checked').val();
         console.log(category);
+            addCardToArray();
 
             // $('#camCheck').show();  un comment out later when finish
 
@@ -51,7 +73,7 @@ $(document).ready(function (){
     $('#n1_1').click( () => { //power card landing page
         let powerCat =  $('input[name="powerCat"]:checked').val();
         console.log(powerCat);
-
+        addCardToArray();
         switch (powerCat) {
             case "1": //Wind Turbine //complete -- could use some error handling
                 $('#1_A').show();
@@ -77,6 +99,9 @@ $(document).ready(function (){
     }); //END POWER CARD  landing page
 
             $('#submit1_A').click( () => { //wind turbine card: determines if case needed
+
+                addCardToArray();
+
                 let  wintT1=  $('#windT1').val();
                 let  wintT2=  $('#windT2').val();
                 let  wintT3=  $('#windT3').val();
@@ -102,6 +127,7 @@ $(document).ready(function (){
             }); //END wind turbine page
 
             $('#submit1_B').click( () => { //solar power card: determines if case needed
+                addCardToArray();
                 let solarP1 = $('#solarP1').val();
                 let solarP2 = $('#solarP2').val();
                 let solarP3 = $('#solarP3').val();
