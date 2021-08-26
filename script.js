@@ -60,6 +60,9 @@ $(document).ready(function (){
             case "windcube": //incomplete
                 $('#5_1').show();
                 break;
+            case "comms":
+                $('#6_1').show();
+                break;
             default:
                 $('#0').append('<div class="errorText">Please select an option to continue</div>');
 
@@ -380,6 +383,158 @@ $(document).ready(function (){
             $('#3_E').hide();
         }); // END cam logic  CARD
 
+    $('#submit4_1').click( () => { //Zeoh card landing page
+        addCardToArray();
+        let zCat =  $('input[name="zCat"]:checked').val();
+        console.log(zCat);
 
+        switch (zCat) {
+            case "1": //Raw Files missing Data
+                $('#4_B').show();
+                console.log("i'm in case one");
+                break;
+            case "2"://Processed Files missing Data
+                $('#4_A').show();
+                break;
+            case "3": //Critical Error Flag
+                $('#createCase').show();
+                $('#createCase').prepend(`<span> If this is a new instance of a Critical Error Flag, be sure to bring this information up in the afternoon scrum.</span>`)
+                break;
+            default:
+                $('#4_1').append('<div class="errorText">Please select an option to continue</div>');
+            //category = 0;
+        }// end switch safety landing
+        if (zCat != undefined) {
+            $('#4_1').hide();
+        }
+    }); //end safety landing card
+
+
+            $('#submit4_A').click( () => { //zeph Processed Logic  COMPLETE ME!!!!!!!!
+                addCardToArray();
+                let value1 = $('#zpro1').val(); //collect answers for SmartSheet integration
+                let value2 = $('#zpro2').val();
+                let value3 = $('#zpro3').val(); //collect answers for SmartSheet integration
+
+                if (value2 === "No") { //True Heading Issue
+                    $('#4_AB').show();
+                }
+                else if(value1 === "Yes"){ //Gill Data missing
+                    //$('#createCase').show(); send them to Gill cards?
+                }
+
+                else
+                    console.log("else");
+                $('#4_A').hide();
+            }); // END zeph Processed Logic  CARD
+
+                $('#submit4_AB').click( () => { //True Heading Missing Logic
+                    addCardToArray();
+
+                    $('#createCase').show();
+
+                    $('#4_AB').hide();
+                }); // END True Heading Missing Logic  CARD
+
+
+            $('#submit4_B').click( () => { //zeph raw Logic  COMPLETE ME!!!!!!!!
+                addCardToArray();
+                let value1 = $('#zraw1').val(); //collect answers for SmartSheet integration
+                let value2 = $('#zraw2').val();
+                let value3 = $('#zraw3').val(); //collect answers for SmartSheet integration
+
+                // if (value2 === "No") { //True Heading Issue
+                //     $('#4_AB').show();
+                // }
+                // else if(value1 === "Yes"){ //Gill Data missing
+                //     //$('#createCase').show(); send them to Gill cards?
+                // }
+                //
+                // else
+                //     console.log("else");
+                $('#4_A').hide();
+            }); // END zeph Processed Logic  CARD
+
+
+    $('#submit5_1').click( () => { //Zeoh card landing page
+        addCardToArray();
+        let wc =  $('input[name="wc"]:checked').val();
+        console.log(wc);
+
+        switch (wc) {
+            case "1": //Raw Files missing Data
+                $('#5_A').show();
+                console.log("i'm in case one");
+                break;
+            case "2"://Processed Files missing Data
+                $('#5_A').show();
+                break;
+            default:
+                $('#5_1').append('<div class="errorText">Please select an option to continue</div>');
+            //category = 0;
+        }// end switch safety landing
+        if (wc != undefined) {
+            $('#5_1').hide();
+        }
+    }); //end safety landing card
+
+
+        $('#submit5_A').click( () => { //windcube trouble card
+            addCardToArray();
+
+            $('#createCase').show();
+
+            $('#5_A').hide();
+        }); // END windcube trouble card CARD
+
+
+    $('#submit6_1').click( () => { //comms landing page
+        addCardToArray();
+        let com =  $('input[name="com"]:checked').val();
+        console.log(com);
+
+        switch (com) {
+            case "1": //Missing FTP
+                $('#6_A').show();
+                console.log("i'm in case one");
+                break;
+            case "2"://Missing SmartWeb
+                $('#6_B').show();
+                break;
+            default:
+                $('#6_1').append('<div class="errorText">Please select an option to continue</div>');
+            //category = 0;
+        }// end switch safety landing
+        if (com != undefined) {
+            $('#6_1').hide();
+        }
+    }); //end comms landing card
+
+
+    $('#submit6_B').click( () => { //Comms Logic Card
+        addCardToArray();
+        let value1 = $('#sw1').val(); //Status message coming in?
+        let value2 = $('#sw2').val(); //Off Pos message coming in ?
+
+        if (value1 === "No") { //TCP Comms Issue
+            $('#6_C').show();
+        }
+        else if(value2 === "No") { // IDP COMMS ISSUE- Card missing I think
+            //$('#4_AB').show();
+        }
+
+        else
+            $('#everythingOkay').show();
+        $('#6_B').hide();
+    }); // END Comms Logic Card
+
+
+    $('#submit6_C').click( () => { //windcube trouble card
+        addCardToArray();
+        $('#createCase').prepend(`<span>In your case creation, make sure you include all categories where messages are missing.  </span>`);
+        $('#createCase').show();
+
+        $('#6_C').hide();
+    }); // END windcube trouble card CARD
 
 });//end document on ready

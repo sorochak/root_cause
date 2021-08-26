@@ -214,15 +214,15 @@
 
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="" value="1">
+                    <input class="form-check-input" type="radio" name="zCat" value="1">
                     <label class="form-check-label" for="raw">Raw Files Missing Data</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="" id="processed" value="2">
+                    <input class="form-check-input" type="radio" name="zCat" id="processed" value="2">
                     <label class="form-check-label" for="processed">Processed Files Missing Data</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="" id="flag" value="3">
+                    <input class="form-check-input" type="radio" name="zCat" id="flag" value="3">
                     <label class="form-check-label" for="flag">Critical Error Flag</label>
                 </div>
             </div>
@@ -238,11 +238,11 @@
 
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="" id="raw" value="1">
+                    <input class="form-check-input" type="radio" name="wc" id="raw" value="1">
                     <label class="form-check-label" for="raw">Raw Files Missing Data</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="" id="sta" value="2">
+                    <input class="form-check-input" type="radio" name="wc" id="sta" value="2">
                     <label class="form-check-label" for="sta">.sta Missing</label>
                 </div>
             </div>
@@ -258,11 +258,11 @@
 
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="" id="ftp" value="1">
+                    <input class="form-check-input" type="radio" name="com" id="ftp" value="1">
                     <label class="form-check-label" for="ftp">No FTP Files</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="" id="smartweb" value="2">
+                    <input class="form-check-input" type="radio" name="com" id="smartweb" value="2">
                     <label class="form-check-label" for="smartweb">Missing SmartWeb Messages</label>
                 </div>
             </div>
@@ -280,8 +280,8 @@
             <a href="https://app.smartsheet.com/b/form/11158fba52064df095caf573f8c57b53">Here</a> to verify if a case exists.</p>
             <p>If no case exists:</p><br>
             <h2>Create a Case</h2><br>
-            <p>Make sure all completed interventions are recorded in the intervention log:
-                https://axysaps.sharepoint.com/sites/OPS/Lists/DaaS%20Intervention/AllItems.aspx
+            <p>Make sure all completed interventions are recorded in the intervention log located:
+                <br><a href="https://axysaps.sharepoint.com/sites/OPS/Lists/DaaS%20Intervention/AllItems.aspx">At This Link</a>
             </p><br>
 
             <a class="btn btn-outline-secondary" id="n8" href="#">Save Input</a>
@@ -640,76 +640,71 @@
         <a class="btn btn-outline-secondary" id="submit3_E" href="#">Next</a>
     </div>
 
-    <!--     Container 4.A - Zephir Processed -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+    <!--     Container 4_a - Zephir Processed -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Processed</h2><br>
         <p>Is Gill Data Available?</p>
-        <br>
-        <select class="form-control">
+        <select class="form-control" id="zpro1">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <br>
         <p>Is True Heading Data Available?</p>
-        <br>
-        <select class="form-control">
+        <select class="form-control" id="zpro2">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <p>Is the IPC Online?</p>
-        <br>
-        <select class="form-control">
+        <select class="form-control" id="zpro3">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-        <a class="btn btn-outline-secondary" id="submit4.A" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit4_A" href="#">Next</a>
     </div>
 
-    <!--     Container 4.AB - True Heading = No -->
+    <!--     Container 4_AB - True Heading = No -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_AB"> <!-- This one shows up if True Heading Available is a NO -->
         <h2>True Heading</h2><br>
         <p>If True Heading Data is not available review and follow instructions in the SOP ATI-FLT-019 - True Heading Alert</p>
+        <p>When Complete, please press "Next" to create a case.</p>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-        <a class="btn btn-outline-secondary" id="submit4.AB" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit4_AB" href="#">Next</a>
     </div>
 
-    <!--     Container 4.B - Zephir Raw -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+    <!--     Container 4_B - Zephir Raw -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>RAW</h2><br>
         <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
         <br>
         <p>Is Gill Data Available?</p>
-        <br>
-        <select class="form-control">
+        <select class="form-control" id="zraw1">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <br>
         <p>Is True Heading Data Available?</p>
-        <br>
-        <select class="form-control">
+        <select class="form-control" id="zraw2">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <p>Is the IPC Online?</p>
-        <br>
-        <select class="form-control">
+        <select class="form-control" id="zraw3">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-        <a class="btn btn-outline-secondary" id="submit4.B" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit4_B" href="#">Next</a>
     </div>
 
-    <!--     Container 4.C - IPC -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4.C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+    <!--     Container 4_C - IPC -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Check for files on the IPC</h2><br>
         <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
         <br>
@@ -720,7 +715,7 @@
         </select>
         <br>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-        <a class="btn btn-outline-secondary" id="submit4.C" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit4_C" href="#">Next</a>
     </div>
 
     <!--     Container 5_A - Windcube Troubleshooting -->
@@ -730,7 +725,7 @@
         </h2><br>
         <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
         <br>
-        <select class="form-control">
+        <select class="form-control" id="wcTrouble">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
@@ -740,8 +735,8 @@
         <a class="btn btn-outline-secondary" id="submit5_A" href="#">Next</a>
     </div>
 
-    <!--     Container 6.A - APS -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+    <!--     Container 6_A - APS for missing FTP files-->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Log on to AXYS APS. Is there data on APS for the files that you are missing?</h2><br>
         <br>
         <div class="form-check form-check-inline">
@@ -754,42 +749,42 @@
         </div>
         <br>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-        <a class="btn btn-outline-secondary" id="submit6.A" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit6_A" href="#">Next</a>
     </div>
 
-    <!--     Container 6.B - SW Troubleshooting -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+    <!--     Container 6_B - SW Troubleshooting -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Check Communications</h2><br>
         <br>
         <p>We are going to log on to SmartWeb to do some troubleshooting with the communication channels</p>
         <br>
         <h2>Check the 'status' message. Are there messages coming in every 10 mins?</h2><br>
         <br>
-        <select class="form-control">
+        <select class="form-control" id="sw1">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <br>
-        <h2>Check the 'Off-Position' message. Are there messages coming once daily, just after midnnight UTC?</h2><br>
+        <h2>Check the 'Off-Position' message. Are there messages coming once daily, just after midnight UTC?</h2><br>
         <br>
-        <select class="form-control">
+        <select class="form-control" id="sw2">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <br>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-        <a class="btn btn-outline-secondary" id="submit6.B" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit6_B" href="#">Next</a>
     </div>
 
-    <!--     Container 6.C - TCP Issue -->
-    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6.C">
+    <!--     Container 6_C - TCP Issue -->
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_C">
         <h2>TCP Issue</h2><br>
         <br>
         <p>We have identified an issue with the TCP communications. A case will need to be created; however, we want to gather some more information first.</p>
         <br>
-        <h2>Check through other TCP messages, such as MET, generator, lidar power... how many messages are missing?</h2><br>
+        <h2>Check through other TCP messages, such as MET, generator, LiDar power... how many messages are missing?</h2><br>
         <br>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="" id="one" value="2">
@@ -805,11 +800,10 @@
         <select class="form-control">
             <option>Yes</option> 
             <option>No</option>
-            <option>IDK</option>
         </select>
         <br>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-        <a class="btn btn-o utline-secondary" id="submit6.C" href="#">Next</a>
+        <a class="btn btn-outline-secondary" id="submit6_C" href="#">Next</a>
 
     </div>
     </div>
