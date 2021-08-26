@@ -1,6 +1,8 @@
 body {
     margin: 0;
     background-color: #214564;
+    font-family: Roboto;
+
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     width: 100%;
@@ -34,7 +36,7 @@ body {
 #header {
     background-color: #3B3B3B;
     color: #6FB43F;
-    font-family: Museo Slab;
+    font-family: "Roboto Light";
     height: 70px;
     line-height: 70px;
     text-align: center;
@@ -46,16 +48,13 @@ h1 {
 
 h2 {
     color: #125033;
-    font-family: Museo Slab;
 }
 
 p {
-    color: #747272;
-    font-family: Museo Slab;
+    color: #000000;
 }
 
 .form-check-label {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     color: #125033;
 }
