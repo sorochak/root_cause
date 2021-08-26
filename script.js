@@ -1,8 +1,8 @@
 $(document).ready(function (){
     $('.quizContainer').hide(); //hide all cards, then below, show only the starting card
     $('#0').show();
-    let visCards = [];
-
+    let visCards = []; //array of type string that hold the ID's of all visited cards.
+    let counter = 0; //total elements in the card array
         function addCardToArray(){
 
             let arr = [];
@@ -15,12 +15,23 @@ $(document).ready(function (){
             }
 
             visCards.push(arr[2].id); //the card div is always the second one in the visible array. push the k value pair of ID to VisCard arr
+            counter++;
 
             console.log(arr);
             console.log(visCards);
             console.log(" is the visCard array");
             console.log(typeof visCards[0]); //type of "string"
-        }
+            console.log(counter + " is our current count")
+        };
+
+        $('.goBack').click(() => { //a listener for all go back buttons (hopefully)
+            $('.quizContainer').hide();  //hide all cards
+            counter--;
+            console.log(counter);
+            $(`#${visCards[counter]}`).show(); //go to the card saved in the array -1;
+            console.log("TESTING ALL CLICKS");
+
+        });
 
     // console.log(orderOfCards[0]);
 
@@ -28,12 +39,10 @@ $(document).ready(function (){
         $('#camCheck').hide(); //take this out when done
     });
 
-        $('#submitQ1').click( () => { //home landing page
+    $('#submitQ1').click( () => { //home landing page
+        addCardToArray();
         let category =  $('input[name="problemCategory"]:checked').val();
-        console.log(category);
-            addCardToArray();
-
-            // $('#camCheck').show();  un comment out later when finish
+        // $('#camCheck').show();  un comment out later when finish
 
         switch (category) {
             case "power": //incomplete - need gen cards
@@ -62,18 +71,9 @@ $(document).ready(function (){
 
 
 
-
-
-
-
-
-
-
-
     $('#n1_1').click( () => { //power card landing page
-        let powerCat =  $('input[name="powerCat"]:checked').val();
-        console.log(powerCat);
         addCardToArray();
+        let powerCat =  $('input[name="powerCat"]:checked').val();
         switch (powerCat) {
             case "1": //Wind Turbine //complete -- could use some error handling
                 $('#1_A').show();
@@ -99,7 +99,6 @@ $(document).ready(function (){
     }); //END POWER CARD  landing page
 
             $('#submit1_A').click( () => { //wind turbine card: determines if case needed
-
                 addCardToArray();
 
                 let  wintT1=  $('#windT1').val();
@@ -151,7 +150,7 @@ $(document).ready(function (){
 
 
             $('#submit1_C').click( () => { //Gen Fuel Cell card: determines if case needed
-
+                addCardToArray();
 
 
 
@@ -161,7 +160,7 @@ $(document).ready(function (){
 
 
             $('#submit1_D').click( () => { //Gen Diesel card: determines if case needed
-
+                addCardToArray();
 
 
 
@@ -171,6 +170,7 @@ $(document).ready(function (){
 
 
     $('#submit2_1').click( () => { //safety card landing page
+        addCardToArray();
         let safeCat =  $('input[name="safeCat"]:checked').val();
         console.log(safeCat);
 
@@ -196,6 +196,7 @@ $(document).ready(function (){
 
 
             $('#submit2_A').click( () => { //WLS LOGIC CARD
+                addCardToArray();
                 let value1 = $('#WLS1').val();
                 let value2 = $('#WLS2').val();
                 let value3 = $('#WLS3').val(); //which compartment will be used for adding info into smartsheet.
@@ -210,6 +211,7 @@ $(document).ready(function (){
 
 
             $('#submit2_B').click( () => { //Hatch Card
+                addCardToArray();
                 let value1 = $('#checkHatch').val();
 
                 if (value1 === "Yes") //it's not sunny or night
@@ -221,6 +223,7 @@ $(document).ready(function (){
             }); // END Hatch LOGIC CARD
 
             $('#submit2_C').click( () => { //Off Pos Logic card
+                addCardToArray();
                 let value1 = $('#offPos1').val();
                 let value2 = $('#offPos2').val();
 
@@ -234,6 +237,7 @@ $(document).ready(function (){
             }); // END Off Pos Logic card
 
                     $('#submit2_C_2').click( () => { //Off Alerts checking severity pt1
+                        addCardToArray();
                         let value1 = $('#oPos1').val();
                         let value2 = $('#oPos2').val();
 
@@ -253,6 +257,7 @@ $(document).ready(function (){
 
 
                     $('#submit2_C_3').click( () => { //checking DMS settings
+                        addCardToArray();
                         let value1 = $('#oPos3').val();
                         let value2 = $('#oPos4').val();
 
@@ -271,6 +276,7 @@ $(document).ready(function (){
 
 
     $('#submit3_1').click( () => { //safety card landing page
+        addCardToArray();
         let metCat =  $('input[name="metCat"]:checked').val();
         console.log(metCat);
 
@@ -296,11 +302,12 @@ $(document).ready(function (){
             //category = 0;
         }// end switch safety landing
         if (metCat != undefined) {
-            //$('#3_1').hide();
+            $('#3_1').hide();
         }
     }); //end safety landing card
 
         $('#submit3_A').click( () => { //Humidity Logic
+            addCardToArray();
             let value1 = $('#hum1').val();
             let value2 = $('#hum2').val();
 
@@ -313,6 +320,7 @@ $(document).ready(function (){
         }); // END Humidity Logic  CARD
 
         $('#submit3_B').click( () => { //AirTemp Logic
+            addCardToArray();
             let value1 = $('#atemp1').val();
             let value2 = $('#atemp2').val();
 
@@ -325,6 +333,7 @@ $(document).ready(function (){
         }); // ENDAirTemp Logic  CARD
 
         $('#submit3_C').click( () => { //baro Logic
+            addCardToArray();
             let value1 = $('#baro').val();
 
             if (value1 === "Yes") //If the thermometer is not reading correctly OR data missing on FTP
@@ -336,6 +345,7 @@ $(document).ready(function (){
         }); // ENDbaro Logic  CARD
 
         $('#submit3_D').click( () => { //cam Logic
+            addCardToArray();
             let value1 = $('#cam1').val(); //collect answers for SmartSheet integration
             let value2 = $('#cam2').val();
             let value3 = $('#cam3').val(); //collect answers for SmartSheet integration
@@ -349,6 +359,25 @@ $(document).ready(function (){
                 $('#createCase').show();
 
             $('#3_D').hide();
+        }); // END cam logic  CARD
+
+        $('#submit3_E').click( () => { //gill Logic
+            addCardToArray();
+            let value1 = $('#gill1').val(); //collect answers for SmartSheet integration
+            let value2 = $('#gill').val();
+            let value3 = $('#gill3').val(); //collect answers for SmartSheet integration
+
+            // if (value2 === "Yes") { //Buoy on Essentials. No problem
+            //     $('#everythingOkay').show();
+            //     $('#everythingOkay').prepend(`<h3>It appears that the buoy is on power saving mode.
+            //         It is expected for the camera files to be missing while power saving mode is turned on.</h3> <br>`);
+            // }
+            // else
+            //     $('#createCase').show();
+
+            //Edith will help with logic
+
+            $('#3_E').hide();
         }); // END cam logic  CARD
 
 
