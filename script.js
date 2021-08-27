@@ -3,6 +3,12 @@ $(document).ready(function (){
     $('#0').show();
     let visCards = []; //array of type string that hold the ID's of all visited cards.
     let counter = 0; //total elements in the card array
+
+    let buoyQuestions = {
+        buoyName: "null",
+        mainCategory: "null",
+        subCategory: "null"
+    }
         function addCardToArray(){
 
             let arr = [];
@@ -17,12 +23,39 @@ $(document).ready(function (){
             visCards.push(arr[2].id); //the card div is always the second one in the visible array. push the k value pair of ID to VisCard arr
             counter++;
 
-            console.log(arr);
-            console.log(visCards);
-            console.log(" is the visCard array");
-            console.log(typeof visCards[0]); //type of "string"
-            console.log(counter + " is our current count")
+
+            // console.log(visCards);
+            // console.log(" is the visCard array");
+            // console.log(typeof visCards[0]); //type of "string"
+            // console.log(counter + " is our current count")
         };
+
+        function test(arrOfAnswerVals){
+            let arr = []; //here array is an array of the h2 objects.
+
+            var ele = document.querySelectorAll('h2'); //grabs all h2 divs on whole html DOM?
+
+            for (var i = 0; i < ele.length; i++){ //for loop gets all visible h2 on current card
+                if($(ele[i]).is(":visible"))
+                    arr.push(ele[i].innerText);
+            }
+            console.log(arr);
+            console.log(arr.length + " is arr length");
+
+            for (var i = 0; i < arr.length; i++){
+                buoyQuestions[arr[i]] = arrOfAnswerVals[i];
+
+            }
+
+            console.log(buoyQuestions);
+           // console.log(arr);
+            //console.log(arrOfAnswerVals);
+
+
+        }
+
+
+
 
         $('.goBack').click(() => { //a listener for all go back buttons (hopefully)
             $('.quizContainer').hide();  //hide all cards
@@ -42,7 +75,12 @@ $(document).ready(function (){
     $('#submitQ1').click( () => { //home landing page
         addCardToArray();
         let category =  $('input[name="problemCategory"]:checked').val();
+        let buoyName = $('#buoyID').val();
+        console.log(buoyName);
         // $('#camCheck').show();  un comment out later when finish
+
+        buoyQuestions.buoyName = buoyName;
+        buoyQuestions.mainCategory = category;
 
         switch (category) {
             case "power": //incomplete - need gen cards
@@ -77,6 +115,9 @@ $(document).ready(function (){
     $('#n1_1').click( () => { //power card landing page
         addCardToArray();
         let powerCat =  $('input[name="powerCat"]:checked').val();
+        let subCat = $('input[name="powerCat"]:checked').attr('id');
+        buoyQuestions.subCategory = subCat;
+        console.log(buoyQuestions);
         switch (powerCat) {
             case "1": //Wind Turbine //complete -- could use some error handling
                 $('#1_A').show();
@@ -103,11 +144,14 @@ $(document).ready(function (){
 
             $('#submit1_A').click( () => { //wind turbine card: determines if case needed
                 addCardToArray();
-
                 let  wintT1=  $('#windT1').val();
                 let  wintT2=  $('#windT2').val();
                 let  wintT3=  $('#windT3').val();
                 let  wintT4=  $('#windT4').val();
+
+                let toGetPassed = [wintT1, wintT2 , wintT3 , wintT4]
+
+                test(toGetPassed);
 
                 if (wintT3 === "") //does not let wind speed be blank
                     $('#1_A').prepend(`<span> Please Complete all fields.</span>`);
@@ -175,8 +219,9 @@ $(document).ready(function (){
     $('#submit2_1').click( () => { //safety card landing page
         addCardToArray();
         let safeCat =  $('input[name="safeCat"]:checked').val();
-        console.log(safeCat);
-
+        let subCat = $('input[name="safeCat"]:checked').attr('id');
+        buoyQuestions.subCategory = subCat;
+        console.log(buoyQuestions);
         switch (safeCat) {
             case "1": //Water Level Sensor
                 $('#2_A').show();
@@ -278,26 +323,28 @@ $(document).ready(function (){
                     }); // END Off Pos Logic card
 
 
-    $('#submit3_1').click( () => { //safety card landing page
+    $('#submit3_1').click( () => { //MET card landing page
         addCardToArray();
         let metCat =  $('input[name="metCat"]:checked').val();
-        console.log(metCat);
+        let subCat = $('input[name="metCat"]:checked').attr('id');
+        buoyQuestions.subCategory = subCat;
+        console.log(buoyQuestions);
 
         switch (metCat) {
-            case "1": //Water Level Sensor
+            case "1": //Humidity Logic
                 $('#3_A').show();
                 console.log("i'm in case one");
                 break;
-            case "2":// Hatch Intrusion
+            case "2":// /AirTemp Logic
                 $('#3_B').show();
                 break;
-            case "3": //OffPos
+            case "3": //baro Logic
                 $('#3_C').show();
                 break;
-            case "4": //OffPos
+            case "4": //cam Logic
                 $('#3_D').show();
                 break;
-            case "5": //OffPos
+            case "5": //gill Logic
                 $('#3_E').show();
                 break;
             default:
@@ -307,7 +354,7 @@ $(document).ready(function (){
         if (metCat != undefined) {
             $('#3_1').hide();
         }
-    }); //end safety landing card
+    }); //end MET landing card
 
         $('#submit3_A').click( () => { //Humidity Logic
             addCardToArray();
@@ -386,7 +433,9 @@ $(document).ready(function (){
     $('#submit4_1').click( () => { //Zeoh card landing page
         addCardToArray();
         let zCat =  $('input[name="zCat"]:checked').val();
-        console.log(zCat);
+        let subCat = $('input[name="zCat"]:checked').attr('id');
+        buoyQuestions.subCategory = subCat;
+        console.log((buoyQuestions));
 
         switch (zCat) {
             case "1": //Raw Files missing Data
@@ -459,7 +508,9 @@ $(document).ready(function (){
     $('#submit5_1').click( () => { //Zeoh card landing page
         addCardToArray();
         let wc =  $('input[name="wc"]:checked').val();
-        console.log(wc);
+        let subCat = $('input[name="wc"]:checked').attr('id');
+        buoyQuestions.subCategory = subCat;
+        console.log((buoyQuestions));
 
         switch (wc) {
             case "1": //Raw Files missing Data
@@ -491,7 +542,9 @@ $(document).ready(function (){
     $('#submit6_1').click( () => { //comms landing page
         addCardToArray();
         let com =  $('input[name="com"]:checked').val();
-        console.log(com);
+        let subCat = $('input[name="com"]:checked').attr('id');
+        buoyQuestions.subCategory = subCat;
+        console.log((buoyQuestions));
 
         switch (com) {
             case "1": //Missing FTP
