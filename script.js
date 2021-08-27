@@ -443,16 +443,16 @@ $(document).ready(function (){
                 let value2 = $('#zraw2').val();
                 let value3 = $('#zraw3').val(); //collect answers for SmartSheet integration
 
-                // if (value2 === "No") { //True Heading Issue
-                //     $('#4_AB').show();
-                // }
-                // else if(value1 === "Yes"){ //Gill Data missing
-                //     //$('#createCase').show(); send them to Gill cards?
-                // }
-                //
-                // else
-                //     console.log("else");
-                $('#4_A').hide();
+                 if (value2 === "No") { //True Heading Issue
+                    $('#4_AB').show();
+                }
+                else if(value1 === "Yes"){ //Gill Data missing
+                    //$('#createCase').show(); send them to Gill cards?
+                }
+
+                else
+                    console.log("else");
+                $('#4_B').hide();
             }); // END zeph Processed Logic  CARD
 
 
@@ -520,7 +520,7 @@ $(document).ready(function (){
             $('#6_C').show();
         }
         else if(value2 === "No") { // IDP COMMS ISSUE- Card missing I think
-            //$('#4_AB').show();
+            $('#6_D').show();
         }
 
         else
@@ -529,12 +529,21 @@ $(document).ready(function (){
     }); // END Comms Logic Card
 
 
-    $('#submit6_C').click( () => { //windcube trouble card
+    $('#submit6_C').click( () => { //smartweb messages missing
         addCardToArray();
         $('#createCase').prepend(`<span>In your case creation, make sure you include all categories where messages are missing.  </span>`);
         $('#createCase').show();
 
         $('#6_C').hide();
-    }); // END windcube trouble card CARD
+    }); // END //smartweb messages missing
+
+
+    $('#submit6_D').click( () => { //IDP issues
+        addCardToArray();
+        $('#createCase').prepend(`<span>In your case creation, make sure you note include the results of checking the IDP viewer.  </span>`);
+        $('#createCase').show();
+
+        $('#6_D').hide();
+    }); // END //smartweb messages missing
 
 });//end document on ready

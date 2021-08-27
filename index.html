@@ -13,7 +13,7 @@
 
 <body>
     <div id="header">
-        <h1>AXYS Technologies Inc</h1>
+        <h1><a href="index.html">AXYS Technologies Inc </a></h1>
     </div>
     <!--     Main Content Div    -->
     <div class="container-fluid" id="main">
@@ -338,35 +338,31 @@
 
         <!--     Container 1_B - Solar Panel -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-            <h2>Is there data available for both solar panels?</h2><br>
-            <br>
+            <h3>Is there data available for both solar panels?</h3><br>
             <select class="form-control" id="solarP1">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h2>Is the other solar panel producing power?</h2><br>
-            <br>
+            <h3>Is the other solar panel producing power?</h3><br>
             <select class="form-control" id="solarP2">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h2>Load the buoy's location on Windy.com. Is the weather forecasted to be sunny? Is it also daytime there?</h2><br>
-            <br>
+            <h3>Load the buoy's location on Windy.com. Is the weather forecasted to be sunny? Is it also daytime there?</h3><br>
             <select class="form-control" id="solarP3">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h2>Are both panels using the same MPPT? Navigate to SmartWeb, if both panels use one MPPT, there will only be one MPPT between FC1 and FC2. </h2><br>
-            <br>
+            <h3>Are both panels using the same MPPT? Navigate to SmartWeb, if both panels use one MPPT, there will only be one MPPT between FC1 and FC2. </h3><br>
             <select class="form-control" id="solarP4">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h2>IF YES: check total average power in Net Power Stats. Is total average power higher than MPPT reading? </h2><br>
+            <h3>IF YES: check total average power in Net Power Stats. Is total average power higher than MPPT reading? </h3><br>
             <br>
             <select class="form-control" id="solarP5">
                 <option>Yes</option>
@@ -541,9 +537,8 @@
     <!--     Container 3_B - Air Temp Sensor -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Air Temp Sensor</h2><br>
-        <p>Is the sensor reporting incorrect temperatures for the region where the buoy is deployed?</p>
         <br>
-        <p> Go to Windy.com to verify what the current air temperature is. </p>
+        <p> Go to <a href="www.windy.com">Windy.com</a> to verify what the current air temperature is. </p>
         <br>
         <h2>Is the sensor reporting incorrect temperatures for the region where the buoy is deployed?</h2>
         <select class="form-control" id="atemp1">
@@ -564,9 +559,8 @@
     <!--     Container 3_C - Barometer -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h2>Barometer</h2><br>
+        <p>Go to <a href="www.windy.com">Windy.com</a>  to verify what the current local air pressure is.</p>
         <p>Is the sensor reporting incorrect pressure for the region where the buoy is deployed?</p>
-        <br>
-        <p>Go to Windy.com to verify what the current local air pressure is.</p>
         <select class="form-control" id="baro">
             <option>Yes</option>
             <option>No</option>
@@ -784,11 +778,11 @@
         <h2>Check through other TCP messages, such as MET, generator, LiDar power... how many messages are missing?</h2><br>
         <br>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="" id="one" value="2">
+            <input class="form-check-input" type="radio" name="" value="2">
             <label class="form-check-label" for="one">One</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="multiple" id="multiple" value="3">
+            <input class="form-check-input" type="radio" name="multiple"  value="3">
             <label class="form-check-label" for="multiple">More than One</label>
         </div>
         <br> 
@@ -801,8 +795,37 @@
         <br>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
         <a class="btn btn-outline-secondary" id="submit6_C" href="#">Next</a>
-
     </div>
+
+        <!--     Container 6_D - IDP ISSUE -->
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_D">
+            <h2>TCP Issue</h2><br>
+            <br>
+            <p>We have identified an issue with the IDP communications. A case will need to be created; however, we want to gather some more information first.</p>
+            <br>
+            <p>Log onto SmartWeb, and navigate to the buoy that is having the Communication Issue. Locate the serial number of the IDP communication. A picture is provided below to show you where to find this number.</p>
+            <img src="idp.jpg">
+            <p>Once you have found this serial number, log onto the IDP communication viewer <a href="http://idp.axys-aps.com/signin.aspx?ReturnUrl=%2fidp%2f"> Here</a>
+            to check if you see communications over IDP. If you do not have this login information, contact your supervisor. </p>
+           <br>
+            <h2> Does it appear that IDP has a connection to this buoy?</h2>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <br>
+            <h2>Check the other FC. Are there messages missing on the other FC also?</h2><br>
+            <br>
+            <select class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <br>
+            <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
+            <a class="btn btn-outline-secondary" id="submit6_D" href="#">Next</a>
+        </div>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
