@@ -1,10 +1,11 @@
 $(document).ready(function (){
     $('.quizContainer').hide(); //hide all cards, then below, show only the starting card
     $('#0').show();
+
     let visCards = []; //array of type string that hold the ID's of all visited cards.
     let counter = 0; //total elements in the card array
 
-    let buoyQuestions = {
+    let buoyQuestions = { //this object will show the relevant info about the buoy, and the questions answered + the responses.
         buoyName: "null",
         mainCategory: "null",
         subCategory: "null"
@@ -23,14 +24,12 @@ $(document).ready(function (){
             visCards.push(arr[2].id); //the card div is always the second one in the visible array. push the k value pair of ID to VisCard arr
             counter++;
 
-
-            // console.log(visCards);
-            // console.log(" is the visCard array");
-            // console.log(typeof visCards[0]); //type of "string"
-            // console.log(counter + " is our current count")
         };
 
-        function test(arrOfAnswerVals){
+        function pairResponses(arrOfAnswerVals){  //pairs questions with answers then adds both to the object above.
+            //the param passed in is an array of ANSWERS from the active card.
+            //the below functions pairs the questions from top to bottom to the ANSWERS from the user and adds it into the final object
+
             let arr = []; //here array is an array of the h2 objects.
 
             var ele = document.querySelectorAll('h2'); //grabs all h2 divs on whole html DOM?
@@ -55,18 +54,12 @@ $(document).ready(function (){
         }
 
 
-
-
         $('.goBack').click(() => { //a listener for all go back buttons (hopefully)
             $('.quizContainer').hide();  //hide all cards
             counter--;
-            console.log(counter);
             $(`#${visCards[counter]}`).show(); //go to the card saved in the array -1;
-            console.log("TESTING ALL CLICKS");
 
         });
-
-    // console.log(orderOfCards[0]);
 
     $('#submit7').click( () => {
         $('#camCheck').hide(); //take this out when done
@@ -149,9 +142,8 @@ $(document).ready(function (){
                 let  wintT3=  $('#windT3').val();
                 let  wintT4=  $('#windT4').val();
 
-                let toGetPassed = [wintT1, wintT2 , wintT3 , wintT4]
-
-                test(toGetPassed);
+                let toGetPassed = [wintT1, wintT2 , wintT3 , wintT4];
+                pairResponses(toGetPassed);
 
                 if (wintT3 === "") //does not let wind speed be blank
                     $('#1_A').prepend(`<span> Please Complete all fields.</span>`);
@@ -179,6 +171,9 @@ $(document).ready(function (){
                 let solarP3 = $('#solarP3').val();
                 let solarP4 = $('#solarP4').val();
                 let solarP5 = $('#solarP5').val();
+
+                let toGetPassed = [solarP1, solarP2, solarP3, solarP4, solarP5]
+                pairResponses(toGetPassed);
 
                 if (solarP3 === "No") //it's not sunny or night
                     $('#everythingOkay').show();
@@ -249,6 +244,10 @@ $(document).ready(function (){
                 let value2 = $('#WLS2').val();
                 let value3 = $('#WLS3').val(); //which compartment will be used for adding info into smartsheet.
 
+                let toGetPassed = [value1, value2, value3];
+                pairResponses(toGetPassed);
+
+
                 if (value1 < value2) //it's not sunny or night
                     $('#createCase').show();
                 else
@@ -261,6 +260,9 @@ $(document).ready(function (){
             $('#submit2_B').click( () => { //Hatch Card
                 addCardToArray();
                 let value1 = $('#checkHatch').val();
+
+                let toGetPassed = [value1];
+                pairResponses(toGetPassed);
 
                 if (value1 === "Yes") //it's not sunny or night
                     $('#createCase').show();
@@ -276,6 +278,9 @@ $(document).ready(function (){
                 let value2 = $('#offPos2').val();
 
 
+                let toGetPassed = [value1, value2];
+                pairResponses(toGetPassed);
+
                 if (value1 && value2 === "Yes" ) //buoy might be floating away
                     $('#2_C_2').show();
                 else
@@ -288,6 +293,9 @@ $(document).ready(function (){
                         addCardToArray();
                         let value1 = $('#oPos1').val();
                         let value2 = $('#oPos2').val();
+
+                        let toGetPassed = [value1, value2];
+                        pairResponses(toGetPassed);
 
                         console.log(value1 + " is val1 2c2");
                         console.log(value2+ " is val2");
@@ -308,6 +316,9 @@ $(document).ready(function (){
                         addCardToArray();
                         let value1 = $('#oPos3').val();
                         let value2 = $('#oPos4').val();
+
+                        let toGetPassed = [value1, value2];
+                        pairResponses(toGetPassed);
 
                         if (value1 === "Yes" && value2 === "No" ) { //buoy had the incorrect watchCircle set.
                             $('#everythingOkay').show();
@@ -361,6 +372,9 @@ $(document).ready(function (){
             let value1 = $('#hum1').val();
             let value2 = $('#hum2').val();
 
+            let toGetPassed = [value1, value2];
+            pairResponses(toGetPassed);
+
             if (value1  && value2 === "Yes") //if sensor 100% and data is missing from the FTP
                 $('#createCase').show();
             else
@@ -373,6 +387,9 @@ $(document).ready(function (){
             addCardToArray();
             let value1 = $('#atemp1').val();
             let value2 = $('#atemp2').val();
+
+            let toGetPassed = [value1, value2];
+            pairResponses(toGetPassed);
 
             if (value1 === "Yes" || value2 === "Yes") //If the thermometer is not reading correctly OR data missing on FTP
                 $('#createCase').show();
