@@ -496,7 +496,7 @@ $(document).ready(function (){
                     $('#4_AB').show();
                 }
                 else if(value1 === "Yes"){ //Gill Data missing
-                    //$('#createCase').show(); send them to Gill cards?
+                    $('#createCase').show();
                 }
 
                 else
@@ -526,7 +526,7 @@ $(document).ready(function (){
                     $('#4_AB').show();
                 }
                 else if(value1 === "Yes"){ //Gill Data missing
-                    //$('#createCase').show(); send them to Gill cards?
+                    $('#createCase').show();
                 }
 
                 else
