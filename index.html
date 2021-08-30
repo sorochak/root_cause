@@ -93,8 +93,8 @@
 
         <!--     Container 7 - Camera Check -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="camCheck">
-            <h2>Check Camera Images</h2><br>
-            <p>Log onto AXTS APS and visually inspect the buoy. Can you see any visible damage or other obvious issues? (ie. blocked lidar, birds etc, broken mast)</p><br>
+            <h1>Check Camera Images</h1><br>
+            <h2>Log onto AXTS APS and visually inspect the buoy. Can you see any visible damage or other obvious issues? (ie. blocked lidar, birds etc, broken mast)</h2><br>
             <br>
             <select class="form-control">
                 <option>Yes</option>
@@ -102,7 +102,7 @@
                 <option>IDK</option>
             </select>
             <br>
-            <h3> If you can see damage on the buoy, what appears to be wrong?</h3>
+            <h2> If you can see damage on the buoy, what appears to be wrong?</h2>
             <input type="text" PLACEHOLDER="Please write 'none' if no damage is visible."> <br>
 
             <a class="btn btn-outline-secondary" id="submit7" href="#">Next</a>
@@ -150,7 +150,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2_1">
             <h2>What safety Equipment is having an issue?</h2><br>
             <p></p><br>
-            <h2>Select One:</h2><br>
+            <h4>Select One:</h4><br>
 
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
@@ -175,7 +175,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_1">
             <h2>What Met Equipment is having an issue?</h2><br>
             <p></p><br>
-            <h2>Select One:</h2><br>
+            <h4>Select One:</h4><br>
 
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
@@ -207,7 +207,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_1">
             <h2>What is happening with the Zephir?</h2><br>
             <p></p><br>
-            <h2>Select One:</h2><br>
+            <h4>Select One:</h4><br>
 
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
@@ -231,7 +231,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="5_1">
             <h2>What is happening with the wind cube ?</h2><br>
             <p></p><br>
-            <h2>Select One:</h2><br>
+            <h4>Select One:</h4><br>
 
             <div class="categoryRadios">
                 <div class="form-check form-check-inline">
@@ -270,13 +270,13 @@
 
         <!--     Container 8 - Create a Case -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="createCase">
-            <h2>Check for an existing Case</h2><br>
+            <h3>Check for an existing Case</h3><br>
             <p>We have identified a problem with the buoy system. Let's double check and see if a case already exists for this problem.</p><br>
             <br>
             <p>Please go
             <a href="https://app.smartsheet.com/b/form/11158fba52064df095caf573f8c57b53">Here</a> to verify if a case exists.</p>
             <p>If no case exists:</p><br>
-            <h2>Create a Case</h2><br>
+            <h3>Create a Case</h3><br>
             <p>Make sure all completed interventions are recorded in the intervention log located:
                 <br><a href="https://axysaps.sharepoint.com/sites/OPS/Lists/DaaS%20Intervention/AllItems.aspx">At This Link</a>
             </p><br>
@@ -301,7 +301,8 @@
                 <option>No Data</option>
             </select>
             <br>
-            <h2>Load the buoy's location on Windy.com. What is the forecasted wind speed in meters per second? (m/s)</h2><br>
+            <h3>Load the buoy's location on Windy.com.</h3> 
+            <h2>What is the forecasted wind speed in meters per second? (m/s)</h2><br>
             <br>
             <label for="windT3">Windspeed (m/s):</label>
             <input class="form-control" type="number" name="windspeed" id="windT3" min="0">
@@ -319,11 +320,11 @@
         </div>
 
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="everythingOkay"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-            <h2>Continue Monitoring</h2><br>
+            <h3>Continue Monitoring</h3><br>
             <br>
             <br>
-            <h2>It appears that the data is within a reasonable threshold. Continue monitoring for this issue to see if it persists. Creating a case is
-            not needed at this time. </h2><br>
+            <h3>It appears that the data is within a reasonable threshold. Continue monitoring for this issue to see if it persists. Creating a case is
+            not needed at this time. </h3><br>
             <br>
 
 
@@ -338,31 +339,34 @@
 
         <!--     Container 1_B - Solar Panel -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-            <h3>Is there data available for both solar panels?</h3><br>
+            <h2>Is there data available for both solar panels?</h2><br>
             <select class="form-control" id="solarP1">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h3>Is the other solar panel producing power?</h3><br>
+            <h2>Is the other solar panel producing power?</h2><br>
             <select class="form-control" id="solarP2">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h3>Load the buoy's location on Windy.com. Is the weather forecasted to be sunny? Is it also daytime there?</h3><br>
+            <h3>Load the buoy's location on Windy.com.</h3> 
+            <h2>Is the weather forecasted to be sunny? Is it also daytime there?</h2><br>
             <select class="form-control" id="solarP3">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h3>Are both panels using the same MPPT? Navigate to SmartWeb, if both panels use one MPPT, there will only be one MPPT between FC1 and FC2. </h3><br>
+            <h2>Are both panels using the same MPPT?</h2> 
+            <h3>Navigate to SmartWeb, if both panels use one MPPT, there will only be one MPPT between FC1 and FC2. </h3><br>
             <select class="form-control" id="solarP4">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
-            <h3>IF YES: check total average power in Net Power Stats. Is total average power higher than MPPT reading? </h3><br>
+            <h3>IF YES: check total average power in Net Power Stats.</h3> 
+            <h2>Is total average power higher than MPPT reading? </h2><br>
             <br>
             <select class="form-control" id="solarP5">
                 <option>Yes</option>
@@ -473,9 +477,10 @@
 
         <!--     Container 2_C_2 - Off Position  -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2_C_2">
-            <h2>Download the latest GPS Coordinates</h2><br>
+            <h3>Download the latest GPS Coordinates</h3><br>
             <br>
-            <p>Chart the position of the buoy. Does it appear that the buoy is outside of it's regular moored position?</p>
+            <p>Chart the position of the buoy.</p><br>
+            <h2>Does it appear that the buoy is outside of it's regular moored position?</h2>
             <select class="form-control" id="oPos1">
                 <option>Yes</option>
                 <option>No</option>
@@ -492,12 +497,12 @@
 
         <!--     Container 2_C_3 - Off Position Alerts but buoy appears to be in correct location -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="2_C_3"> <!-- Follow up with a link to communications-->
-            <h2>Investigate WatchCircle settings</h2><br>
+            <h1>Investigate WatchCircle settings</h1><br>
             <br>
             <p>Log onto DMS and look up the WatchCircle coordinates. Compare this with data from the channel regarding launch site.</p>
             <br>
-            <p>If the WatchCircle is set to the incorrect location, verify the coordinates with your supervisor and update the buoy. Wait for 10 mins. Have the off
-            position alerts stopped coming in on the MS teams channel?</p>
+            <p>If the WatchCircle is set to the incorrect location, verify the coordinates with your supervisor and update the buoy. Wait for 10 mins.</p><br>
+            <h2>Have the off position alerts stopped coming in on the MS teams channel?</h2>
             <select class="form-control" id="oPos3">
                 <option>Yes</option>
                 <option>No</option>
@@ -516,7 +521,7 @@
 
     <!--     Container 3_A - Humidity Sensor -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Humidity Sensor</h2><br>
+        <h1>Humidity Sensor</h1><br>
         <h2>Is the humidity sensor reporting near 100% humidity?</h2>
         <br>
         <select class="form-control" id="hum1">
@@ -536,7 +541,7 @@
 
     <!--     Container 3_B - Air Temp Sensor -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Air Temp Sensor</h2><br>
+        <h1>Air Temp Sensor</h1><br>
         <br>
         <p> Go to <a href="www.windy.com">Windy.com</a> to verify what the current air temperature is. </p>
         <br>
@@ -558,9 +563,9 @@
 
     <!--     Container 3_C - Barometer -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Barometer</h2><br>
+        <h1>Barometer</h1><br>
         <p>Go to <a href="www.windy.com">Windy.com</a>  to verify what the current local air pressure is.</p>
-        <p>Is the sensor reporting incorrect pressure for the region where the buoy is deployed?</p>
+        <h2>Is the sensor reporting incorrect pressure for the region where the buoy is deployed?</h2>
         <select class="form-control" id="baro">
             <option>Yes</option>
             <option>No</option>
@@ -572,10 +577,10 @@
 
     <!--     Container 3_D - Camera -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_D"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Camera</h2><br>
+        <h1>Camera</h1><br>
         <p><b>NOTE: Buoys f120 & f130 do not have cameras installed.</b></p>
         <br>
-        <p>Are camera images missing from the FTP?</p>
+        <h2>Are camera images missing from the FTP?</h2>
         <br>
         <select class="form-control" id="cam1">
             <option>Yes</option>
@@ -583,14 +588,14 @@
         </select>
         <br>
         <br>
-        <p>Is the buoy on power savings or essentials mode?
-        If you are not sure, check the MS teams channel for that buoy to see if there are any updates relating to power saving or essentials mode.</p>
+        <h2>Is the buoy on power savings or essentials mode?</h2><br>
+        <p>If you are not sure, check the MS teams channel for that buoy to see if there are any updates relating to power saving or essentials mode.</p>
         <select class="form-control" id="cam2">
             <option>Yes</option>
             <option>No</option>
         </select>
         <br><br>
-        <p>Are the images available from the other camera?</p>
+        <h2>Are the images available from the other camera?</h2>
         <select class="form-control" id="cam3">
             <option>Yes</option>
             <option>No</option>
@@ -604,8 +609,8 @@
     <!--     This one may need updates to the questions? -->
 
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Gill</h2><br>
-        <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
+        <h1>Gill</h1><br>
+        <h2>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</h2>
         <select class="form-control" id="gill1">
             <option>Yes</option>
             <option>No</option>
@@ -613,7 +618,7 @@
         </select>
         <br>
         <br>
-        <p>Is the other gill missing data?</p>
+        <h2>Is the other gill missing data?</h2>
         <select class="form-control" id="gill2">
             <option>Yes</option>
             <option>No</option>
@@ -621,7 +626,8 @@
         </select>
         <br>
         <br>
-        <p>Open up the LiDar - Processed file. Check under the headings labeled AXYS.(furthermost right columns in the PROCESSED excel sheet) Is there data missing in the LIDar File?</p>
+        <p>Open up the LiDar - Processed file. Check under the headings labeled AXYS.(furthermost right columns in the PROCESSED excel sheet)</p><br>
+        <h2>Is there data missing in the LIDar File?</h2>
         <select class="form-control" id="gill2=3">
             <option>Yes</option>
             <option>No</option>
@@ -633,21 +639,21 @@
 
     <!--     Container 4_a - Zephir Processed -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Processed</h2><br>
-        <p>Is Gill Data Available?</p>
+        <h1>Processed</h1><br>
+        <h2>Is Gill Data Available?</h2>
         <select class="form-control" id="zpro1">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <br>
-        <p>Is True Heading Data Available?</p>
+        <h2>Is True Heading Data Available?</h2>
         <select class="form-control" id="zpro2">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
-        <p>Is the IPC Online?</p>
+        <h2>Is the IPC Online?</h2>
         <select class="form-control" id="zpro3">
             <option>Yes</option>
             <option>No</option>
@@ -659,7 +665,7 @@
 
     <!--     Container 4_AB - True Heading = No -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_AB"> <!-- This one shows up if True Heading Available is a NO -->
-        <h2>True Heading</h2><br>
+        <h1>True Heading</h1><br>
         <p>If True Heading Data is not available review and follow instructions in the SOP ATI-FLT-019 - True Heading Alert</p>
         <p>When Complete, please press "Next" to create a case.</p>
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
@@ -668,23 +674,23 @@
 
     <!--     Container 4_B - Zephir Raw -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>RAW</h2><br>
-        <p>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</p>
+        <h1>RAW</h1><br>
+        <h2>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</h2>
         <br>
-        <p>Is Gill Data Available?</p>
+        <h2>Is Gill Data Available?</h2>
         <select class="form-control" id="zraw1">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
         <br>
-        <p>Is True Heading Data Available?</p>
+        <h2>Is True Heading Data Available?</h2>
         <select class="form-control" id="zraw2">
             <option>Yes</option>
             <option>No</option>
             <option>IDK</option>
         </select>
-        <p>Is the IPC Online?</p>
+        <h2>Is the IPC Online?</h2>
         <select class="form-control" id="zraw3">
             <option>Yes</option>
             <option>No</option>
@@ -696,8 +702,9 @@
 
     <!--     Container 4_C - IPC -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="4_C"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Check for files on the IPC</h2><br>
-        <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
+        <h3>Check for files on the IPC</h3><br>
+        <p>Log onto the IPC via teamviewer.</p>
+        <h2>Are the files on the buoy?</h2>
         <br>
         <select class="form-control">
             <option>Yes</option>
@@ -711,10 +718,11 @@
 
     <!--     Container 5_A - Windcube Troubleshooting -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="5_A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>If the Windcube raw file is missing data (greater than 5 consecutive full rows of NaNs), or if the .sta file is missing bring it 
+        <h3>If the Windcube raw file is missing data (greater than 5 consecutive full rows of NaNs), or if the .sta file is missing bring it 
             to the attention of an engineer before completing a system reboot as per SOP ATI-FLT-017 - Power Reset Procedure.
-        </h2><br>
-        <p>Log onto the IPC via teamviewer. Are the files on the buoy?</p>
+        </h3><br>
+        <p>Log onto the IPC via teamviewer.</p>
+        <h2>Are the files on the buoy?</h2>
         <br>
         <select class="form-control" id="wcTrouble">
             <option>Yes</option>
@@ -728,7 +736,8 @@
 
     <!--     Container 6_A - APS for missing FTP files-->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_A"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Log on to AXYS APS. Is there data on APS for the files that you are missing?</h2><br>
+        <h3>Log on to AXYS APS.</h3> 
+        <h2>Is there data on APS for the files that you are missing?</h2><br>
         <br>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="" id="noData" value="2">
@@ -745,11 +754,12 @@
 
     <!--     Container 6_B - SW Troubleshooting -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_B"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
-        <h2>Check Communications</h2><br>
+        <h3>Check Communications</h3><br>
         <br>
         <p>We are going to log on to SmartWeb to do some troubleshooting with the communication channels</p>
         <br>
-        <h2>Check the 'status' message. Are there messages coming in every 10 mins?</h2><br>
+        <h3>Check the 'status' message.</h3> 
+        <h2>Are there messages coming in every 10 mins?</h2><br>
         <br>
         <select class="form-control" id="sw1">
             <option>Yes</option>
@@ -757,7 +767,8 @@
             <option>IDK</option>
         </select>
         <br>
-        <h2>Check the 'Off-Position' message. Are there messages coming once daily, just after midnight UTC?</h2><br>
+        <h3>Check the 'Off-Position' message.</h3> 
+        <h2>Are there messages coming once daily, just after midnight UTC?</h2><br>
         <br>
         <select class="form-control" id="sw2">
             <option>Yes</option>
@@ -771,11 +782,12 @@
 
     <!--     Container 6_C - TCP Issue -->
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_C">
-        <h2>TCP Issue</h2><br>
+        <h3>TCP Issue</h3><br>
         <br>
         <p>We have identified an issue with the TCP communications. A case will need to be created; however, we want to gather some more information first.</p>
         <br>
-        <h2>Check through other TCP messages, such as MET, generator, LiDar power... how many messages are missing?</h2><br>
+        <h3>Check through other TCP messages, such as MET, generator, LiDar power...</h3> 
+        <h2>How many messages are missing?</h2><br>
         <br>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="" value="2">
@@ -799,7 +811,7 @@
 
         <!--     Container 6_D - IDP ISSUE -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="6_D">
-            <h2>TCP Issue</h2><br>
+            <h1>TCP Issue</h1><br>
             <br>
             <p>We have identified an issue with the IDP communications. A case will need to be created; however, we want to gather some more information first.</p>
             <br>
