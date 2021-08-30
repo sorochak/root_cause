@@ -70,7 +70,7 @@ $(document).ready(function (){
         let category =  $('input[name="problemCategory"]:checked').val();
         let buoyName = $('#buoyID').val();
         console.log(buoyName);
-        // $('#camCheck').show();  un comment out later when finish
+         //$('#camCheck').show(); // un comment out later when finish
 
         buoyQuestions.buoyName = buoyName;
         buoyQuestions.mainCategory = category;
@@ -452,7 +452,7 @@ $(document).ready(function (){
             $('#3_E').hide();
         }); // END cam logic  CARD
 
-    $('#submit4_1').click( () => { //Zeoh card landing page
+    $('#submit4_1').click( () => { //Zeph card landing page
         addCardToArray();
         let zCat =  $('input[name="zCat"]:checked').val();
         buoyQuestions.subCategory = $('input[name="zCat"]:checked').attr('id');
@@ -461,10 +461,12 @@ $(document).ready(function (){
         switch (zCat) {
             case "1": //Raw Files missing Data
                 $('#4_B').show();
+                $('#camCheck').show();
                 console.log("i'm in case one");
                 break;
             case "2"://Processed Files missing Data
                 $('#4_A').show();
+                $('#camCheck').show();
                 break;
             case "3": //Critical Error Flag
                 $('#createCase').show();
@@ -477,7 +479,7 @@ $(document).ready(function (){
         if (zCat != undefined) {
             $('#4_1').hide();
         }
-    }); //end safety landing card
+    }); //Zeph card landing page
 
 
             $('#submit4_A').click( () => { //zeph Processed Logic  COMPLETE ME!!!!!!!!
@@ -533,7 +535,7 @@ $(document).ready(function (){
             }); // END zeph Processed Logic  CARD
 
 
-    $('#submit5_1').click( () => { //Zeoh card landing page
+    $('#submit5_1').click( () => { //WindCube card landing page
         addCardToArray();
         let wc =  $('input[name="wc"]:checked').val();
         buoyQuestions.subCategory = $('input[name="wc"]:checked').attr('id');
@@ -550,14 +552,14 @@ $(document).ready(function (){
             default:
                 $('#5_1').append('<div class="errorText">Please select an option to continue</div>');
             //category = 0;
-        }// end switch safety landing
+        }//
         if (wc != undefined) {
             $('#5_1').hide();
         }
-    }); //end safety landing card
+    }); //end WindCube card
 
 
-        $('#submit5_A').click( () => { //windcube trouble card FIXME: gather input to pair for object
+    $('#submit5_A').click( () => { //windcube trouble card FIXME: gather input to pair for object
             addCardToArray();
 
             $('#createCase').show();
@@ -628,4 +630,8 @@ $(document).ready(function (){
         $('#6_D').hide();
     }); // END //smartweb messages missing
 
+
+
+
+    //FIXME: add logic for camera check card
 });//end document on ready
