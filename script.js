@@ -325,9 +325,7 @@ $(document).ready(function (){
                                 Continue to monitor the off-position messages to ensure the new coordinate message takes. `);
                         }
 
-                        else
-                        { // check comms? //
-                             }
+                        else $('#createCase').show();
 
                         $('#submit2_C_3').hide();
                     }); // END Off Pos Logic card
@@ -559,7 +557,7 @@ $(document).ready(function (){
     }); //end safety landing card
 
 
-        $('#submit5_A').click( () => { //windcube trouble card
+        $('#submit5_A').click( () => { //windcube trouble card FIXME: gather input to pair for object
             addCardToArray();
 
             $('#createCase').show();
