@@ -120,10 +120,10 @@ $(document).ready(function (){
                 $('#1_B').show();
                 break;
             case "3": //Gen Fuel Cell //incomplete
-                $('#1_C').show();
+                $('#1_D').show();
                 break;
             case "4": //Gen Diesel //incomplete
-                $('#1_D').show();
+                $('#1_C').show();
                 break;
             default:
                 $('#1_1').append('<div class="errorText">Please select an option to continue</div>');
