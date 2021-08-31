@@ -216,7 +216,20 @@ $(document).ready(function (){
 
             $('#submit1_C').click( () => { //Gen Diesel card: determines if case needed
                 addCardToArray();
+                   
+                let genD1 = $('#genD1').val();
+                let genD2 = $('#genD2').val();
 
+                if (genD1 === "No")
+                    $('#createCase').show();
+
+                else if (genD1 === "Yes" && genD2 ==="No")
+                    $('#1_E').show();
+
+                else
+                    $('#everythingOkay').show();
+
+                $('#1_C').hide();
 
 
 
