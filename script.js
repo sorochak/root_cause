@@ -194,7 +194,7 @@ $(document).ready(function (){
             }); // END solar power page
 
 
-            $('#submit1_C').click( () => { //Gen Fuel Cell card: determines if case needed
+            $('#submit1_D').click( () => { //Gen Fuel Cell card: determines if case needed
                 addCardToArray();
 
                 let fuelC1 = $('#fuelC1').val();
@@ -209,7 +209,7 @@ $(document).ready(function (){
                 // else
                 //     $('#everythingOkay').show();
 
-                $('#1_C').hide();
+                $('#1_D').hide();
 
             }); // END fuel cell page
 
