@@ -15,9 +15,9 @@ $(document).ready(function (){
 
             let arr = [];
 
-            var ele = document.querySelectorAll('[id]'); //grabs all ID divs on whole html DOM
+            let ele = document.querySelectorAll('[id]'); //grabs all ID divs on whole html DOM
 
-            for (var i = 0; i < ele.length; i++){ //for loop gets all visible divs
+            for (let i = 0; i < ele.length; i++){ //for loop gets all visible divs
                 if($(ele[i]).is(":visible"))
                     arr.push(ele[i]);
             }
@@ -25,7 +25,7 @@ $(document).ready(function (){
             visCards.push(arr[2].id); //the card div is always the second one in the visible array. push the k value pair of ID to VisCard arr
             counter++;
 
-        };
+        }
 
         function pairResponses(arrOfAnswerVals){  //pairs questions with answers then adds both to the object above.
             //the param passed in is an array of ANSWERS from the active card.
@@ -33,16 +33,16 @@ $(document).ready(function (){
 
             let arr = []; //here array is an array of the h2 objects.
 
-            var ele = document.querySelectorAll('h2'); //grabs all h2 divs on whole html DOM?
+            let ele = document.querySelectorAll('h2'); //grabs all h2 divs on whole html DOM?
 
-            for (var i = 0; i < ele.length; i++){ //for loop gets all visible h2 on current card
+            for (let i = 0; i < ele.length; i++){ //for loop gets all visible h2 on current card
                 if($(ele[i]).is(":visible"))
                     arr.push(ele[i].innerText);
             }
             console.log(arr);
             console.log(arr.length + " is arr length");
 
-            for (var i = 0; i < arr.length; i++){
+            for (let i = 0; i < arr.length; i++){
                 buoyQuestions[arr[i]] = arrOfAnswerVals[i];
 
             }
@@ -72,7 +72,7 @@ $(document).ready(function (){
         let buoyName = $('#buoyID').val();
         let operatorName = $('#operator').val();
         console.log(buoyName);
-        // $('#camCheck').show();  un comment out later when finish
+         //$('#camCheck').show(); // un comment out later when finish
 
         buoyQuestions.buoyName = buoyName;
         buoyQuestions.operatorName = operatorName;
@@ -111,8 +111,8 @@ $(document).ready(function (){
     $('#n1_1').click( () => { //power card landing page
         addCardToArray();
         let powerCat =  $('input[name="powerCat"]:checked').val();
-        let subCat = $('input[name="powerCat"]:checked').attr('id');
-        buoyQuestions.subCategory = subCat;
+        buoyQuestions.subCategory = $('input[name="powerCat"]:checked').attr('id');
+
         console.log(buoyQuestions);
         switch (powerCat) {
             case "1": //Wind Turbine //complete -- could use some error handling
@@ -181,7 +181,7 @@ $(document).ready(function (){
                 if (solarP3 === "No") //it's not sunny or night
                     $('#everythingOkay').show();
 
-                else if (solarP1 && solarP2 && solarP3 ==="Yes" & solarP4 ==="No") //other panel shows power being produced + sun
+                else if (solarP1 && solarP2 && solarP3 ==="Yes" && solarP4 ==="No") //other panel shows power being produced + sun
                     $('#createCase').show();
 
                 else if(solarP3 && solarP4 && solarP5 ==="Yes") //sunny and net power stats low
@@ -244,8 +244,7 @@ $(document).ready(function (){
     $('#submit2_1').click( () => { //safety card landing page
         addCardToArray();
         let safeCat =  $('input[name="safeCat"]:checked').val();
-        let subCat = $('input[name="safeCat"]:checked').attr('id');
-        buoyQuestions.subCategory = subCat;
+        buoyQuestions.subCategory = $('input[name="safeCat"]:checked').attr('id');
         console.log(buoyQuestions);
         switch (safeCat) {
             case "1": //Water Level Sensor
@@ -356,9 +355,7 @@ $(document).ready(function (){
                                 Continue to monitor the off-position messages to ensure the new coordinate message takes. `);
                         }
 
-                        else
-                        { // check comms? //
-                             }
+                        else $('#createCase').show();
 
                         $('#submit2_C_3').hide();
                     }); // END Off Pos Logic card
@@ -367,8 +364,7 @@ $(document).ready(function (){
     $('#submit3_1').click( () => { //MET card landing page
         addCardToArray();
         let metCat =  $('input[name="metCat"]:checked').val();
-        let subCat = $('input[name="metCat"]:checked').attr('id');
-        buoyQuestions.subCategory = subCat;
+        buoyQuestions.subCategory = $('input[name="metCat"]:checked').attr('id');
         console.log(buoyQuestions);
 
         switch (metCat) {
@@ -432,6 +428,9 @@ $(document).ready(function (){
         $('#submit3_C').click( () => { //baro Logic
             addCardToArray();
             let value1 = $('#baro').val();
+            let toGetPassed = [value1];
+            pairResponses(toGetPassed);
+
 
             if (value1 === "Yes") //If the thermometer is not reading correctly OR data missing on FTP
                 $('#createCase').show();
@@ -446,6 +445,9 @@ $(document).ready(function (){
             let value1 = $('#cam1').val(); //collect answers for SmartSheet integration
             let value2 = $('#cam2').val();
             let value3 = $('#cam3').val(); //collect answers for SmartSheet integration
+
+            let toGetPassed = [value1, value2, value3];
+            pairResponses(toGetPassed);
 
             if (value2 === "Yes") { //Buoy on Essentials. No problem
                 $('#everythingOkay').show();
@@ -463,9 +465,10 @@ $(document).ready(function (){
             let value1 = $('#gill1').val(); //collect answers for SmartSheet integration
             let value2 = $('#gill2').val();
             let value3 = $('#gill3').val(); //collect answers for SmartSheet integration
-            
+          
             let toGetPassed = [value1, value2, value3];
             pairResponses(toGetPassed);
+
   
             if (value1 === "No" && value3 === "Yes")  
                 $('#3_F').show();
@@ -483,20 +486,21 @@ $(document).ready(function (){
 
         });// END 1 hz data SOP page
 
-    $('#submit4_1').click( () => { //Zeoh card landing page
+    $('#submit4_1').click( () => { //Zeph card landing page
         addCardToArray();
         let zCat =  $('input[name="zCat"]:checked').val();
-        let subCat = $('input[name="zCat"]:checked').attr('id');
-        buoyQuestions.subCategory = subCat;
+        buoyQuestions.subCategory = $('input[name="zCat"]:checked').attr('id');
         console.log((buoyQuestions));
 
         switch (zCat) {
             case "1": //Raw Files missing Data
                 $('#4_B').show();
+                $('#camCheck').show();
                 console.log("i'm in case one");
                 break;
             case "2"://Processed Files missing Data
                 $('#4_A').show();
+                $('#camCheck').show();
                 break;
             case "3": //Critical Error Flag
                 $('#createCase').show();
@@ -509,7 +513,7 @@ $(document).ready(function (){
         if (zCat != undefined) {
             $('#4_1').hide();
         }
-    }); //end safety landing card
+    }); //Zeph card landing page
 
 
             $('#submit4_A').click( () => { //zeph Processed Logic  COMPLETE ME!!!!!!!!
@@ -517,6 +521,10 @@ $(document).ready(function (){
                 let value1 = $('#zpro1').val(); //collect answers for SmartSheet integration
                 let value2 = $('#zpro2').val();
                 let value3 = $('#zpro3').val(); //collect answers for SmartSheet integration
+
+                let toGetPassed = [value1, value2, value3];
+                pairResponses(toGetPassed);
+
 
                 if (value2 === "No") { //True Heading Issue
                     $('#4_AB').show();
@@ -545,6 +553,9 @@ $(document).ready(function (){
                 let value2 = $('#zraw2').val();
                 let value3 = $('#zraw3').val(); //collect answers for SmartSheet integration
 
+                let toGetPassed = [value1, value2, value3];
+                pairResponses(toGetPassed);
+
                  if (value2 === "No") { //True Heading Issue
                     $('#4_AB').show();
                 }
@@ -558,11 +569,10 @@ $(document).ready(function (){
             }); // END zeph Processed Logic  CARD
 
 
-    $('#submit5_1').click( () => { //Zeoh card landing page
+    $('#submit5_1').click( () => { //WindCube card landing page
         addCardToArray();
         let wc =  $('input[name="wc"]:checked').val();
-        let subCat = $('input[name="wc"]:checked').attr('id');
-        buoyQuestions.subCategory = subCat;
+        buoyQuestions.subCategory = $('input[name="wc"]:checked').attr('id');
         console.log((buoyQuestions));
 
         switch (wc) {
@@ -576,14 +586,14 @@ $(document).ready(function (){
             default:
                 $('#5_1').append('<div class="errorText">Please select an option to continue</div>');
             //category = 0;
-        }// end switch safety landing
+        }//
         if (wc != undefined) {
             $('#5_1').hide();
         }
-    }); //end safety landing card
+    }); //end WindCube card
 
 
-        $('#submit5_A').click( () => { //windcube trouble card
+    $('#submit5_A').click( () => { //windcube trouble card FIXME: gather input to pair for object
             addCardToArray();
 
             $('#createCase').show();
@@ -595,8 +605,7 @@ $(document).ready(function (){
     $('#submit6_1').click( () => { //comms landing page
         addCardToArray();
         let com =  $('input[name="com"]:checked').val();
-        let subCat = $('input[name="com"]:checked').attr('id');
-        buoyQuestions.subCategory = subCat;
+        buoyQuestions.subCategory = $('input[name="com"]:checked').attr('id');
         console.log((buoyQuestions));
 
         switch (com) {
@@ -621,6 +630,9 @@ $(document).ready(function (){
         addCardToArray();
         let value1 = $('#sw1').val(); //Status message coming in?
         let value2 = $('#sw2').val(); //Off Pos message coming in ?
+
+        let toGetPassed = [value1, value2];
+        pairResponses(toGetPassed);
 
         if (value1 === "No") { //TCP Comms Issue
             $('#6_C').show();
@@ -652,4 +664,8 @@ $(document).ready(function (){
         $('#6_D').hide();
     }); // END //smartweb messages missing
 
+
+
+
+    //FIXME: add logic for camera check card
 });//end document on ready
