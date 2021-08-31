@@ -7,6 +7,7 @@ $(document).ready(function (){
 
     let buoyQuestions = { //this object will show the relevant info about the buoy, and the questions answered + the responses.
         buoyName: "null",
+        operatorName: "null", // AS added operator name
         mainCategory: "null",
         subCategory: "null"
     }
