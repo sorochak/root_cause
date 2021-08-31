@@ -158,7 +158,7 @@ $(document).ready(function (){
                         $('#createCase').show();
 
                     else
-                        $('#everythingOkay').show();
+                        $('#1_E').show();
 
                     $('#1_A').hide();
                 }
@@ -194,11 +194,20 @@ $(document).ready(function (){
             $('#submit1_C').click( () => { //Gen Fuel Cell card: determines if case needed
                 addCardToArray();
 
+                let fuelC1 = $('#fuelC1').val();
 
+                if (fuelC1 === "No")
+                    $('#createCase').show();
 
+                else if (fuelC1 === "Yes" && fuelC2 ==="No")
+                    $('#createCase').show();
 
+                else
+                    $('#everythingOkay').show();
 
-            });
+                $('#1_C').hide();
+
+            }); // END fuel cell page
 
 
             $('#submit1_D').click( () => { //Gen Diesel card: determines if case needed
