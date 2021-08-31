@@ -465,7 +465,7 @@ $(document).ready(function (){
             let value3 = $('#gill3').val(); //collect answers for SmartSheet integration
 
   
-            if (value1 === "No" && value3 === "Yes") { 
+            if (value1 === "No" && value3 === "Yes")  
                 $('#3_F').show();
 
             else
