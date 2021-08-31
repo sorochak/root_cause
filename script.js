@@ -206,8 +206,8 @@ $(document).ready(function (){
                 else if (fuelC1 === "Yes" && fuelC2 ==="No")
                     $('#1_E').show();
 
-                // else
-                //     $('#everythingOkay').show();
+                else
+                    $('#everythingOkay').show();
 
                 $('#1_D').hide();
 
