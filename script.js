@@ -202,8 +202,8 @@ $(document).ready(function (){
                 else if (fuelC1 === "Yes" && fuelC2 ==="No")
                     $('#createCase').show();
 
-                else
-                    $('#everythingOkay').show();
+                // else
+                //     $('#everythingOkay').show();
 
                 $('#1_C').hide();
 
