@@ -214,7 +214,7 @@ $(document).ready(function (){
             }); // END fuel cell page
 
 
-            $('#submit1_D').click( () => { //Gen Diesel card: determines if case needed
+            $('#submit1_C').click( () => { //Gen Diesel card: determines if case needed
                 addCardToArray();
 
 
@@ -222,6 +222,13 @@ $(document).ready(function (){
 
 
             });
+
+            $('#submit1_E').click( () => {  // Generator Operations: Instructs to follow Gen Ops SOP
+                addCardToArray();
+                $('#createCase').show();
+                $('#1_E').hide();
+
+            });// END generator ops SOP page
 
 
     $('#submit2_1').click( () => { //safety card landing page
