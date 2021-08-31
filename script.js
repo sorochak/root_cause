@@ -70,6 +70,7 @@ $(document).ready(function (){
         addCardToArray();
         let category =  $('input[name="problemCategory"]:checked').val();
         let buoyName = $('#buoyID').val();
+        let operatorName = $('#operator').val();
         console.log(buoyName);
          //$('#camCheck').show(); // un comment out later when finish
 
