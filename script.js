@@ -195,12 +195,13 @@ $(document).ready(function (){
                 addCardToArray();
 
                 let fuelC1 = $('#fuelC1').val();
+                let fuelC2 = $('#fuelC2').val();
 
                 if (fuelC1 === "No")
                     $('#createCase').show();
 
                 else if (fuelC1 === "Yes" && fuelC2 ==="No")
-                    $('#createCase').show();
+                    $('#1_E').show();
 
                 // else
                 //     $('#everythingOkay').show();
