@@ -75,6 +75,7 @@ $(document).ready(function (){
         // $('#camCheck').show();  un comment out later when finish
 
         buoyQuestions.buoyName = buoyName;
+        buoyQuestions.operatorName = operatorName;
         buoyQuestions.mainCategory = category;
 
         switch (category) {
