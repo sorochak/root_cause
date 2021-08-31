@@ -624,15 +624,13 @@
 
     <!--     Container 3_E - Gill -->
 
-    <!--     This one may need updates to the questions? -->
-
     <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
         <h1>Gill</h1><br>
-        <h2>Log onto AXYS APS and visually inspect the buoy. Can you see any visible damage?</h2>
+        <h3>Log onto AXYS APS and visually inspect the buoy.</h3>
+        <h2>Can you see any visible damage?</h2>
         <select class="form-control" id="gill1">
             <option>Yes</option>
             <option>No</option>
-            <option>IDK</option>
         </select>
         <br>
         <br>
@@ -644,15 +642,25 @@
         </select>
         <br>
         <br>
-        <p>Open up the LiDar - Processed file. Check under the headings labeled AXYS.(furthermost right columns in the PROCESSED excel sheet)</p><br>
-        <h2>Is there data missing in the LIDar File?</h2>
-        <select class="form-control" id="gill2=3">
+        <h2>Is True Heading Data Available?</h2>
+        <select class="form-control" id="gill3">
             <option>Yes</option>
             <option>No</option>
-            <option>N/A - Processed Not Avail</option>
         </select>
+
         <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
         <a class="btn btn-outline-secondary" id="submit3_E" href="#">Next</a>
+    </div>
+
+    <!--     Container 3_F - 1 hz SOP -->
+
+    <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="3_F"> 
+        <h3>Review and follow instructions in the 1hz data SOP.</h3>
+        <p>If the 1hz data is not ok, create a case. If the 1hz data is fine, then create a case for 10 minute processing algorithm.</p>
+
+        <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
+        <a class="btn btn-outline-secondary" id="submit3_F" href="#">Next</a>
+    
     </div>
 
     <!--     Container 4_a - Zephir Processed -->

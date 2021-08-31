@@ -231,10 +231,7 @@ $(document).ready(function (){
 
                 $('#1_C').hide();
 
-
-
-
-            });
+            });  // END diesel gen page
 
             $('#submit1_E').click( () => {  // Generator Operations: Instructs to follow Gen Ops SOP
                 addCardToArray();
@@ -464,21 +461,25 @@ $(document).ready(function (){
         $('#submit3_E').click( () => { //gill Logic
             addCardToArray();
             let value1 = $('#gill1').val(); //collect answers for SmartSheet integration
-            let value2 = $('#gill').val();
+            let value2 = $('#gill2').val();
             let value3 = $('#gill3').val(); //collect answers for SmartSheet integration
 
-            // if (value2 === "Yes") { //Buoy on Essentials. No problem
-            //     $('#everythingOkay').show();
-            //     $('#everythingOkay').prepend(`<h3>It appears that the buoy is on power saving mode.
-            //         It is expected for the camera files to be missing while power saving mode is turned on.</h3> <br>`);
-            // }
-            // else
-            //     $('#createCase').show();
+  
+            if (value1 === "No" && value3 === "Yes") { 
+                $('#3_F').show();
 
-            //Edith will help with logic
+            else
+                $('#createCase').show();
 
             $('#3_E').hide();
-        }); // END cam logic  CARD
+        }); // END gill logic  CARD
+
+        $('#submit3_F').click( () => {  // Gill Operations: Instructs to follow 1 hz Data SOP
+            addCardToArray();
+            $('#createCase').show();
+            $('#3_F').hide();
+
+        });// END 1 hz data SOP page
 
     $('#submit4_1').click( () => { //Zeoh card landing page
         addCardToArray();
