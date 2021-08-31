@@ -58,7 +58,7 @@
             <h2>Operator Name:</h2><br>
             <input class="form-control" type="text" name="operator" id="operator">
             <br>
-            
+
             <h2>Where have you encountered a problem?</h2><br>
 
             <div class="categoryRadios">
@@ -325,6 +325,7 @@
             <a class="btn btn-outline-secondary" id="submit1_A" href="#">Next</a>
         </div>
 
+        <!--     Container Everything is Okay -->
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="everythingOkay"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
             <h3>Continue Monitoring</h3><br>
             <br>
@@ -409,22 +410,34 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1_D"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
             <h2>Are there messages coming into SmartWeb?</h2><br>
             <br>
-            <select class="form-control">
+            <select class="form-control" id="fuelC1">
                 <option>Yes</option>
                 <option>No</option>
-                <option>IDK</option>
             </select>
             <br>
             <h2>Does the fuel cell kick on when it is supposed to?</h2><br>
             <br>
-            <select class="form-control">
+            <select class="form-control"id="fuelC2">
                 <option>Yes</option>
                 <option>No</option>
-                <option>IDK</option>
             </select>
             <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
             <a class="btn btn-outline-secondary" id="submit1_D" href="#">Next</a>
         </div>
+
+        <!--     Container 1_E - Generator Ops SOP -->
+
+        <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="1_E"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+            <div class="col-md-5 p-lg-5 mx-auto my-5 box quizContainer" id="generatorOpsSOP"> <!-- Make sure to add in JS that only allowes for feasible numebrs -->
+                <h3>Generator Operations</h3><br>
+                <br>
+                <br>
+                <h3>It appears that there is an issue with the generator. Please review and follow instructions in the Generator Operations SOP, follow up with an engineer and create a case. </h3><br>
+                <br>
+    
+                <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
+                <a class="btn btn-outline-secondary" id="submit1_E" href="#">Next</a>
+            </div>
 
 
         <!--     Container 2_A - Water Level Sensor -->
