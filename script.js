@@ -463,7 +463,9 @@ $(document).ready(function (){
             let value1 = $('#gill1').val(); //collect answers for SmartSheet integration
             let value2 = $('#gill2').val();
             let value3 = $('#gill3').val(); //collect answers for SmartSheet integration
-
+            
+            let toGetPassed = [value1, value2, value3];
+            pairResponses(toGetPassed);
   
             if (value1 === "No" && value3 === "Yes")  
                 $('#3_F').show();
