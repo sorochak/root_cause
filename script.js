@@ -565,6 +565,7 @@ $(document).ready(function (){
 
                 else
                     console.log("else");
+                $('#createCase').show();
                 $('#4_B').hide();
             }); // END zeph Processed Logic  CARD
 
