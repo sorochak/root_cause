@@ -528,14 +528,18 @@ $(document).ready(function (){
 
                 if (value2 === "No") { //True Heading Issue
                     $('#4_AB').show();
+                    $('#4_A').hide();
                 }
                 else if(value1 === "Yes"){ //Gill Data missing
-                    $('#createCase').show();
+                    $('#3_E').show();
+                    $('#4_A').hide();
                 }
 
-                else
+                else {
                     console.log("else");
-                $('#4_A').hide();
+                    $('#createCase').show();
+                    $('#4_A').hide();
+                }
             }); // END zeph Processed Logic  CARD
 
                 $('#submit4_AB').click( () => { //True Heading Missing Logic
@@ -547,7 +551,7 @@ $(document).ready(function (){
                 }); // END True Heading Missing Logic  CARD
 
 
-            $('#submit4_B').click( () => { //zeph raw Logic  COMPLETE ME!!!!!!!!
+            $('#submit4_B').click( () => { //zeph raw Logic  
                 addCardToArray();
                 let value1 = $('#zraw1').val(); //collect answers for SmartSheet integration
                 let value2 = $('#zraw2').val();
