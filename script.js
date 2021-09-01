@@ -200,6 +200,9 @@ $(document).ready(function (){
                 let fuelC1 = $('#fuelC1').val();
                 let fuelC2 = $('#fuelC2').val();
 
+                let toGetPassed = [fuelC1, fuelC2];
+                pairResponses(toGetPassed);
+
                 if (fuelC1 === "No")
                     $('#createCase').show();
 
@@ -219,6 +222,9 @@ $(document).ready(function (){
                    
                 let genD1 = $('#genD1').val();
                 let genD2 = $('#genD2').val();
+
+                let toGetPassed = [genD1, genD2];
+                pairResponses(toGetPassed);
 
                 if (genD1 === "No")
                     $('#createCase').show();
