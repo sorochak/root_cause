@@ -287,7 +287,7 @@
             </p><br>
 
             <a class="btn btn-outline-secondary goBack" href="#">Go Back</a>
-            <a class="btn btn-outline-secondary" id="n8" href="#">Save Input</a>
+            <a class="btn btn-outline-secondary" id="saveInput" href="#">Save Input</a>
         </div>
 
         <!--     Container 1_A - Wind Turbine Generator -->
@@ -816,17 +816,17 @@
         <h2>How many messages are missing?</h2><br>
         <br>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="" value="2">
-            <label class="form-check-label" for="one">One</label>
+            <input class="form-check-input" type="radio" name="one" value="one" id="tcp1">
+            <label class="form-check-label" >One</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="multiple"  value="3">
-            <label class="form-check-label" for="multiple">More than One</label>
+            <input class="form-check-input" type="radio" name="multiple"  value="multiple" id="tcp2">
+            <label class="form-check-label" >More than One</label>
         </div>
         <br> 
         <h2>Check the other FC. Are there messages missing on the other FC also?</h2><br>
         <br>
-        <select class="form-control">
+        <select class="form-control" id="tcp3">
             <option>Yes</option> 
             <option>No</option>
         </select>
@@ -847,14 +847,14 @@
             to check if you see communications over IDP. If you do not have this login information, contact your supervisor. </p>
            <br>
             <h2> Does it appear that IDP has a connection to this buoy?</h2>
-            <select class="form-control">
+            <select class="form-control" id="idp1">
                 <option>Yes</option>
                 <option>No</option>
             </select>
             <br>
             <h2>Check the other FC. Are there messages missing on the other FC also?</h2><br>
             <br>
-            <select class="form-control">
+            <select class="form-control" id="idp2">
                 <option>Yes</option>
                 <option>No</option>
             </select>
