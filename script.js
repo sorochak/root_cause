@@ -556,12 +556,15 @@ $(document).ready(function (){
                 let toGetPassed = [value1, value2, value3];
                 pairResponses(toGetPassed);
 
-                 if (value2 === "No")  //True Heading Issue
+                 if (value2 === "No") { //True Heading Issue
                     $('#4_AB').show();
+                    $('#4_B').hide();
+                 }
                 
-                else if(value1 === "No") //Gill Data missing
+                else if(value1 === "No") { //Gill Data missing
                     $('#3_E').show();
-                
+                    $('#4_B').hide();
+                }
 
                 else {
                     console.log("else");
