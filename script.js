@@ -625,6 +625,27 @@ $(document).ready(function (){
         }
     }); //end comms landing card
 
+    $('#submit6_A').click( () => { //Comms Logic Card
+        addCardToArray();
+        let dataAPS =  $('input[name="dataAPS"]:checked').val();
+        switch (dataAPS) {
+            case "1": // No data on APS
+                $('#6_C').show();
+                console.log("i'm in case one");
+                break;
+            case "2":// Data on APS
+                $('#createCase').prepend(`<span>In your case creation, make sure you include details indicating this is a pipeline issue.  </span>`);
+                $('#createCase').show();
+                break;
+            default:
+                $('#6_A').append('<div class="errorText">Please select an option to continue</div>');
+            //category = 0;
+        }// end switch safety landing
+        if (dataAPS != undefined) {
+            $('#6_A').hide();
+        }
+    }); // END Comms Logic Card
+
 
     $('#submit6_B').click( () => { //Comms Logic Card
         addCardToArray();
