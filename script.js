@@ -559,7 +559,7 @@ $(document).ready(function (){
                  if (value2 === "No") { //True Heading Issue
                     $('#4_AB').show();
                 }
-                else if(value1 === "Yes"){ //Gill Data missing
+                else if(value1 === "No"){ //Gill Data missing
                     $('#3_E').show();
                 }
 
