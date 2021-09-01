@@ -530,7 +530,7 @@ $(document).ready(function (){
                     $('#4_AB').show();
                     $('#4_A').hide();
                 }
-                else if(value1 === "Yes"){ //Gill Data missing
+                else if(value1 === "No"){ //Gill Data missing
                     $('#3_E').show();
                     $('#4_A').hide();
                 }
