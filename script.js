@@ -560,7 +560,7 @@ $(document).ready(function (){
                     $('#4_AB').show();
                 }
                 else if(value1 === "Yes"){ //Gill Data missing
-                    $('#createCase').show();
+                    $('#3_E').show();
                 }
 
                 else
