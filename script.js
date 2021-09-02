@@ -205,6 +205,9 @@ $(document).ready(function (){
                 let fuelC1 = $('#fuelC1').val();
                 let fuelC2 = $('#fuelC2').val();
 
+                let toGetPassed = [fuelC1, fuelC2];
+                pairResponses(toGetPassed);
+
                 if (fuelC1 === "No")
                     $('#createCase').show();
 
@@ -224,6 +227,9 @@ $(document).ready(function (){
                    
                 let genD1 = $('#genD1').val();
                 let genD2 = $('#genD2').val();
+
+                let toGetPassed = [genD1, genD2];
+                pairResponses(toGetPassed);
 
                 if (genD1 === "No")
                     $('#createCase').show();
@@ -642,6 +648,8 @@ $(document).ready(function (){
     $('#submit6_A').click( () => { //Comms Logic Card
         addCardToArray();
         let dataAPS =  $('input[name="dataAPS"]:checked').val();
+        buoyQuestions.subCategory = $('input[name="dataAPS"]:checked').attr('id');
+
         switch (dataAPS) {
             case "1": // No data on APS
                 $('#6_C').show();
@@ -684,6 +692,15 @@ $(document).ready(function (){
 
     $('#submit6_C').click( () => { //smartweb messages missing
         addCardToArray();
+
+        let value1 = $('#tcp1').val();
+        let value2 = $('#tcp2').val();
+        let value3 = $('#tcp3').val();
+
+        let toGetPassed = [value1, value2, value3];
+        pairResponses(toGetPassed);
+
+
         $('#createCase').prepend(`<span>In your case creation, make sure you include all categories where messages are missing.  </span>`);
         $('#createCase').show();
 
@@ -693,6 +710,13 @@ $(document).ready(function (){
 
     $('#submit6_D').click( () => { //IDP issues
         addCardToArray();
+
+        let value1 = $('#idp1').val();
+        let value2 = $('#idp2').val();
+
+        let toGetPassed = [value1, value2];
+        pairResponses(toGetPassed);
+
         $('#createCase').prepend(`<span>In your case creation, make sure you note include the results of checking the IDP viewer.  </span>`);
         $('#createCase').show();
 
@@ -705,8 +729,12 @@ $(document).ready(function (){
         $('#createCase').hide();
     });
 
+        console.log(buoyQuestions);
+    });
 
 
 
-    //FIXME: add logic for camera check card
+
+
+        //FIXME: add logic for camera check card
 });//end document on ready
