@@ -54,6 +54,11 @@ $(document).ready(function (){
 
         }
 
+        function displayAnswers(buoyQuestions) { // stringifies the buoyQuestions object and displays to html
+            let userAnswers = JSON.stringify(buoyQuestions);
+            document.getElementById("saveAnswers").innerHTML = userAnswers;
+        }
+
 
         $('.goBack').click(() => { //a listener for all go back buttons (hopefully)
             $('.quizContainer').hide();  //hide all cards
@@ -693,6 +698,12 @@ $(document).ready(function (){
 
         $('#6_D').hide();
     }); // END //smartweb messages missing
+
+    $('#saveInput').click( () => {
+        displayAnswers(buoyQuestions);
+        $('#displayAns').show();
+        $('#createCase').hide();
+    })
 
 
 
