@@ -703,7 +703,7 @@ $(document).ready(function (){
         displayAnswers(buoyQuestions);
         $('#displayAns').show();
         $('#createCase').hide();
-    })
+    });
 
 
 
