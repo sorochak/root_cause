@@ -4,8 +4,11 @@ $(document).ready(function (){
 
     let visCards = []; //array of type string that hold the ID's of all visited cards.
     let counter = 0; //total elements in the card array
+    let today = new Date();
+    let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
     let buoyQuestions = { //this object will show the relevant info about the buoy, and the questions answered + the responses.
+        currentDate: date,
         buoyName: "null",
         operatorName: "null", // AS added operator name
         mainCategory: "null",
@@ -727,6 +730,7 @@ $(document).ready(function (){
         displayAnswers(buoyQuestions);
         $('#displayAns').show();
         $('#createCase').hide();
+        $('#everythingOkay').hide();
    
     });
 
