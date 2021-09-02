@@ -728,11 +728,9 @@ $(document).ready(function (){
         $('#displayAns').show();
         $('#createCase').hide();
    
-
-        console.log(buoyQuestions);
     });
 
-
+    console.log(buoyQuestions);
 
 
 
